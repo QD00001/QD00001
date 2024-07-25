@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="高级提示词工程师| 第二部分：编程和算法| 第六节：机器学习库熟悉| 知识点详解： scikit-learn库  就像一个拥有所有常用工具的瑞士军刀，scikit-learn提供了大量易于使用的机器学习工具和算法。   TensorFlow和PyTorch  这两个库像是深度学习领域的两大支柱，TensorFlow像是构建复杂建筑的蓝图，而PyTorch则像是灵活多变的乐高积木。   数据加载与预">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习库熟悉">
+<meta property="og:url" content="http://example.com/2024/06/22/%E5%85%B3%E5%8D%A16%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%93%E7%86%9F%E6%82%89/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="高级提示词工程师| 第二部分：编程和算法| 第六节：机器学习库熟悉| 知识点详解： scikit-learn库  就像一个拥有所有常用工具的瑞士军刀，scikit-learn提供了大量易于使用的机器学习工具和算法。   TensorFlow和PyTorch  这两个库像是深度学习领域的两大支柱，TensorFlow像是构建复杂建筑的蓝图，而PyTorch则像是灵活多变的乐高积木。   数据加载与预">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-06-22T10:00:35.000Z">
+<meta property="article:modified_time" content="2024-07-25T09:40:01.601Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="高级提示词工程师">
+<meta property="article:tag" content="编程和算法">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>机器学习库熟悉 - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="机器学习库熟悉"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiaoXiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-22 10:00" pubdate>
+          June 22, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2k wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          17 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">机器学习库熟悉</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="高级提示词工程师-第二部分：编程和算法"><a href="#高级提示词工程师-第二部分：编程和算法" class="headerlink" title="高级提示词工程师| 第二部分：编程和算法"></a>高级提示词工程师| 第二部分：编程和算法</h1><h2 id="第六节：机器学习库熟悉"><a href="#第六节：机器学习库熟悉" class="headerlink" title="| 第六节：机器学习库熟悉"></a>| 第六节：机器学习库熟悉</h2><h3 id="知识点详解："><a href="#知识点详解：" class="headerlink" title="| 知识点详解："></a>| 知识点详解：</h3><ol>
+<li><p><strong>scikit-learn库</strong></p>
+<ul>
+<li>就像一个拥有所有常用工具的瑞士军刀，scikit-learn提供了大量易于使用的机器学习工具和算法。</li>
+</ul>
+</li>
+<li><p><strong>TensorFlow和PyTorch</strong></p>
+<ul>
+<li>这两个库像是深度学习领域的两大支柱，TensorFlow像是构建复杂建筑的蓝图，而PyTorch则像是灵活多变的乐高积木。</li>
+</ul>
+</li>
+<li><p><strong>数据加载与预处理</strong></p>
+<ul>
+<li>数据预处理就像是在烹饪前清洗和切割食材，确保它们以最佳状态进入模型的“厨房”。</li>
+</ul>
+</li>
+<li><p><strong>模型训练与评估</strong></p>
+<ul>
+<li>模型训练就像是教育一个学生，通过不断学习和练习来提高能力；评估模型则像是进行一场考试，检验学生的学习成果。</li>
+</ul>
+</li>
+<li><p><strong>模型部署</strong></p>
+<ul>
+<li>将训练好的模型部署到实际应用中，就像是将训练有素的运动员送上赛场，展现其真正的实力。</li>
+</ul>
+</li>
+<li><p><strong>特征工程</strong></p>
+<ul>
+<li>特征工程就像是雕塑家挑选和打磨石头，以塑造出一件美丽的艺术品。</li>
+</ul>
+</li>
+<li><p><strong>模型调优</strong></p>
+<ul>
+<li>模型调优就像是调整赛车的引擎和悬挂系统，以确保在各种条件下都能发挥最佳性能。</li>
+</ul>
+</li>
+<li><p><strong>深度学习最佳实践</strong></p>
+<ul>
+<li>深度学习的最佳实践就像是老船长的航海图，指引你避开暗礁，顺利到达目的地。</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码示例与注释："><a href="#代码示例与注释：" class="headerlink" title="代码示例与注释："></a>代码示例与注释：</h3><ol>
+<li><p><strong>使用scikit-learn加载数据集</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_iris  <span class="hljs-comment"># 导入加载数据集的函数</span><br>iris = load_iris()  <span class="hljs-comment"># 加载iris数据集</span><br>X, y = iris.data, iris.target  <span class="hljs-comment"># 分离特征和目标变量</span><br><span class="hljs-comment"># X是特征矩阵，包含了150个样本的4个特征</span><br><span class="hljs-comment"># y是目标向量，包含了150个样本的类别标签</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用TensorFlow创建神经网络</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf  <span class="hljs-comment"># 导入TensorFlow库</span><br>model = tf.keras.models.Sequential([  <span class="hljs-comment"># 创建一个序贯模型</span><br>    tf.keras.layers.Dense(<span class="hljs-number">10</span>, activation=<span class="hljs-string">&#x27;relu&#x27;</span>, input_shape=(<span class="hljs-number">4</span>,)),  <span class="hljs-comment"># 第一层有10个神经元，使用ReLU激活函数</span><br>    tf.keras.layers.Dense(<span class="hljs-number">3</span>, activation=<span class="hljs-string">&#x27;softmax&#x27;</span>)  <span class="hljs-comment"># 输出层有3个神经元，使用Softmax激活函数进行多类分类</span><br>])<br><span class="hljs-comment"># 这个模型可以用于分类iris数据集中的三种花卉</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用PyTorch创建神经网络</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch  <span class="hljs-comment"># 导入PyTorch库</span><br><span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn  <span class="hljs-comment"># 导入PyTorch的神经网络模块</span><br>model = nn.Sequential(  <span class="hljs-comment"># 创建一个序列模型</span><br>    nn.Linear(<span class="hljs-number">4</span>, <span class="hljs-number">10</span>),  <span class="hljs-comment"># 第一层全连接层，从4个输入特征到10个输出特征</span><br>    nn.ReLU(),  <span class="hljs-comment"># 激活函数层，使用ReLU激活函数</span><br>    nn.Linear(<span class="hljs-number">10</span>, <span class="hljs-number">3</span>)  <span class="hljs-comment"># 第二层全连接层，从10个输入特征到3个输出特征</span><br>)<br><span class="hljs-comment"># 这个模型的结构与TensorFlow示例中的模型相同</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>模型训练</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split  <span class="hljs-comment"># 导入数据分割函数</span><br>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>)  <span class="hljs-comment"># 将数据集分割为80%训练集和20%测试集</span><br><br><span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> RandomForestClassifier  <span class="hljs-comment"># 导入随机森林分类器</span><br>model = RandomForestClassifier()  <span class="hljs-comment"># 创建随机森林模型实例</span><br>model.fit(X_train, y_train)  <span class="hljs-comment"># 使用训练数据拟合模型</span><br><span class="hljs-comment"># 模型现在可以根据训练数据对新的输入做出预测</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>模型评估</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score  <span class="hljs-comment"># 导入准确率计算函数</span><br>y_pred = model.predict(X_test)  <span class="hljs-comment"># 使用模型对测试数据进行预测</span><br>accuracy = accuracy_score(y_test, y_pred)  <span class="hljs-comment"># 计算模型预测的准确率</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Model accuracy: <span class="hljs-subst">&#123;accuracy*<span class="hljs-number">100</span>:<span class="hljs-number">.2</span>f&#125;</span>%&quot;</span>)  <span class="hljs-comment"># 打印模型的准确率</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用scikit-learn进行特征选择</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.feature_selection <span class="hljs-keyword">import</span> SelectKBest  <span class="hljs-comment"># 导入特征选择模块</span><br>selector = SelectKBest(k=<span class="hljs-number">2</span>)  <span class="hljs-comment"># 创建一个选择最佳2个特征的选择器</span><br>X_new = selector.fit_transform(X, y)  <span class="hljs-comment"># 拟合特征选择器并转换特征数据</span><br><span class="hljs-comment"># X_new现在只包含原始数据集中最重要的两个特征</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用TensorFlow进行模型调优</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">model.<span class="hljs-built_in">compile</span>(  <span class="hljs-comment"># 配置模型的优化器、损失函数和评估指标</span><br>    optimizer=<span class="hljs-string">&#x27;adam&#x27;</span>,  <span class="hljs-comment"># 使用Adam优化器</span><br>    loss=<span class="hljs-string">&#x27;sparse_categorical_crossentropy&#x27;</span>,  <span class="hljs-comment"># 使用稀疏分类交叉熵作为损失函数</span><br>    metrics=[<span class="hljs-string">&#x27;accuracy&#x27;</span>])  <span class="hljs-comment"># 监控准确率指标</span><br>model.fit(X_train, y_train, epochs=<span class="hljs-number">10</span>, validation_split=<span class="hljs-number">0.2</span>)  <span class="hljs-comment"># 训练模型10个周期，使用20%的训练数据作为验证集</span><br><span class="hljs-comment"># 这个过程中模型将不断学习和调整自身，以提高预测的准确率</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>使用PyTorch进行模型调优</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">criterion = nn.CrossEntropyLoss()  <span class="hljs-comment"># 创建一个交叉熵损失函数，适用于多类分类问题</span><br>optimizer = torch.optim.Adam(model.parameters(), lr=<span class="hljs-number">0.001</span>)  <span class="hljs-comment"># 创建一个Adam优化器，用于更新模型参数</span><br><br><span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_epochs):  <span class="hljs-comment"># 进行多个训练周期</span><br>    optimizer.zero_grad()  <span class="hljs-comment"># 清除之前的梯度信息</span><br>    outputs = model(X_train)  <span class="hljs-comment"># 进行前向传播，获取模型输出</span><br>    loss = criterion(outputs, y_train)  <span class="hljs-comment"># 计算损失值</span><br>    loss.backward()  <span class="hljs-comment"># 进行反向传播，计算梯度</span><br>    optimizer.step()  <span class="hljs-comment"># 更新模型参数</span><br><span class="hljs-comment"># 这个过程就像是在不断地调整汽车的各个部件，以确保它在各种路况下都能表现最佳</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>通过这些生动的比喻和详细的代码注释，你可以更轻松地理解机器学习库的概念和使用方式。每个知识点和代码示例都旨在帮助你构建直观的理解，使学习过程更加有趣和容易记忆。</p>
+<h3 id="关键词解释："><a href="#关键词解释：" class="headerlink" title="关键词解释："></a>关键词解释：</h3><ol>
+<li><p><strong>数据集（Dataset）</strong>: 机器学习中用于训练和测试模型的示例集合，通常包含多个特征和对应的标签。</p>
+</li>
+<li><p><strong>特征（Feature）</strong>: 数据集中用于进行模型训练的输入变量，可以是数值、类别或其他类型的数据。</p>
+</li>
+<li><p><strong>目标&#x2F;标签（Target&#x2F;Label）</strong>: 数据集中我们想要预测或分类的值，是模型训练过程中学习的目标。</p>
+</li>
+<li><p><strong>模型（Model）</strong>: 从数据中学习并进行预测的算法或数学结构，如线性回归、神经网络等。</p>
+</li>
+<li><p><strong>训练（Training）</strong>: 使用数据集来训练模型的过程，目的是让模型学习到数据中的模式和关系。</p>
+</li>
+<li><p><strong>测试（Testing）</strong>: 使用未参与训练过程的数据来评估模型性能的过程，以检验模型的泛化能力。</p>
+</li>
+<li><p><strong>准确率（Accuracy）</strong>: 衡量分类模型性能的指标，表示模型正确预测的样本数占总样本数的比例。</p>
+</li>
+<li><p><strong>激活函数（Activation Function）</strong>: 神经网络中用于在神经元输出上增加非线性的函数，如ReLU或Sigmoid。</p>
+</li>
+<li><p><strong>损失函数（Loss Function）</strong>: 衡量模型预测与实际标签差异的函数，模型训练的目标是最小化损失函数的值。</p>
+</li>
+<li><p><strong>优化器（Optimizer）</strong>: 用于调整模型参数以最小化损失函数的算法，如SGD、Adam等。</p>
+</li>
+<li><p><strong>超参数（Hyperparameter）</strong>: 模型训练前需要设置的参数，如学习率、批次大小、训练周期数等。</p>
+</li>
+<li><p><strong>交叉验证（Cross-validation）</strong>: 一种评估模型性能的方法，通过将数据集分成多个子集并在这些子集上循环进行训练和测试。</p>
+</li>
+<li><p><strong>特征选择（Feature Selection）</strong>: 从原始数据中选择对模型预测最有用的特征的过程，可以提高模型的性能和解释性。</p>
+</li>
+<li><p><strong>深度学习（Deep Learning）</strong>: 一种使用多层神经网络来学习数据复杂模式的机器学习方法。</p>
+</li>
+<li><p><strong>正则化（Regularization）</strong>: 用于防止模型过拟合的技术，通过在损失函数中添加额外的惩罚项来限制模型的复杂度。</p>
+</li>
+<li><p><strong>批次（Batch）</strong>: 在神经网络训练中，数据被分成多个批次进行处理，每个批次包含一定数量的样本。</p>
+</li>
+<li><p><strong>迭代（Iteration）</strong>: 在模型训练过程中，迭代指的是对整个数据集进行一次完整的训练过程。</p>
+</li>
+<li><p><strong>反向传播（Backpropagation）</strong>: 一种在神经网络中计算梯度的方法，用于训练过程中的参数更新。</p>
+</li>
+<li><p><strong>梯度下降（Gradient Descent）</strong>: 一种优化算法，通过迭代地调整参数以最小化损失函数。</p>
+</li>
+<li><p><strong>模型部署（Model Deployment）</strong>: 将训练好的模型应用到实际应用中，如在线服务、移动应用或嵌入式系统。</p>
+</li>
+</ol>
+<p>通过这些关键词的解释，你可以更深入地理解机器学习库中的核心概念和术语，为你在使用这些库进行开发和研究时提供坚实的基础。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/2-%E7%BC%96%E7%A8%8B%E5%92%8C%E7%AE%97%E6%B3%95/" class="category-chain-item">2.编程和算法</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="print-no-link">#高级提示词工程师</a>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B%E5%92%8C%E7%AE%97%E6%B3%95/" class="print-no-link">#编程和算法</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>机器学习库熟悉</div>
+      <div>http://example.com/2024/06/22/关卡6：机器学习库熟悉/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiaoXiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>June 22, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/06/22/%E5%85%B3%E5%8D%A17%EF%BC%9A%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE/" title="实践项目">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">实践项目</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/21/%E5%85%B3%E5%8D%A15%EF%BC%9A%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" title="高级编程技巧">
+                        <span class="hidden-mobile">高级编程技巧</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

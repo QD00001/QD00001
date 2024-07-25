@@ -1,0 +1,1139 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="use node and hexo to create">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XiaoXiangHuiSite">
+<meta property="og:url" content="http://example.com/page/4/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="use node and hexo to create">
+<meta property="og:locale">
+<meta property="article:author" content="XiaoXiangHui">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Welcome to Xianghui&#39;s blog, where you need what you need"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E7%A4%BE%E5%8C%BA%E8%AE%A8%E8%AE%BA/" target="_self">
+          参与开源项目和社区讨论
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E7%A4%BE%E5%8C%BA%E8%AE%A8%E8%AE%BA/" target="_self">
+        <div>
+          高级提示词工程师| 第九部分：持续学习和社区参与| 第二节：参与开源项目和社区讨论| 基础知识：参与开源项目和社区讨论就像是加入一场知识与智慧的盛宴，我们不仅能品尝到他人烹饪的佳肴，还能贡献自己的拿手好菜。  开源项目：开源项目允许任何人贡献代码，促进了技术的共享与创新。 社区讨论：在社区中，我们可以提出问题、分享经验、讨论技术，与同行交流思想。  代码示例：1234567891011121314
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:25" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/9-%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/" class="category-chain-item">9.持续学习和社区参与</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/">#持续学习和社区参与</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E9%98%85%E8%AF%BB%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%92%8C%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A/" target="_self">
+          阅读学术论文和行业报告
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E9%98%85%E8%AF%BB%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%92%8C%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A/" target="_self">
+        <div>
+          高级提示词工程师| 第九部分：持续学习和社区参与| 第一节：阅读学术论文和行业报告| 基础知识：阅读学术论文和行业报告就像是站在巨人的肩膀上，让我们能够借助前人的研究成果和行业专家的见解，更快地攀登知识的高峰。  学术论文：学术论文是学术界交流最新研究成果的主要渠道，通过阅读学术论文，我们可以了解最前沿的理论和方法。 行业报告：行业报告通常由市场研究机构或行业协会编写，提供行业发展的宏观视角和趋势
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:25" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/9-%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/" class="category-chain-item">9.持续学习和社区参与</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/">#持续学习和社区参与</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AF%84%E4%BC%B0AI%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%A6%E7%90%86%E5%BD%B1%E5%93%8D/" target="_self">
+          实践项目-评估AI模型的伦理影响
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AF%84%E4%BC%B0AI%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%A6%E7%90%86%E5%BD%B1%E5%93%8D/" target="_self">
+        <div>
+          高级提示词工程师| 第八部分：伦理和社会责任| 第四节：实践项目| 基础知识：在本节的实践项目中，我们将通过评估一个AI模型的伦理影响来应用前面章节学到的知识。  评估流程：定义评估AI模型伦理影响的流程，包括数据审查、算法分析和结果评估。 改进方案：基于评估结果，提出改进模型伦理性的方案。  代码示例：1234567891011121314151617181920# 假设我们正在评估一个用于招聘
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:11" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/8-%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/" class="category-chain-item">8.伦理和社会责任</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/">#伦理和社会责任</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E7%AE%97%E6%B3%95%E5%81%8F%E8%A7%81%E5%92%8C%E5%85%AC%E5%B9%B3%E6%80%A7/" target="_self">
+          算法偏见和公平性
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E7%AE%97%E6%B3%95%E5%81%8F%E8%A7%81%E5%92%8C%E5%85%AC%E5%B9%B3%E6%80%A7/" target="_self">
+        <div>
+          高级提示词工程师| 第八部分：伦理和社会责任| 第三节：算法偏见和公平性| 基础知识：算法偏见和公平性是AI伦理中的一个核心议题，就像天平的两端，我们需要努力保持平衡，确保AI的决策对所有人都是公正的。  偏见识别：识别并理解数据和算法中可能存在的偏见来源。 公平性设计：在算法设计中采取措施减少偏见，提高公平性。  代码示例：123456789101112131415161718# 假设我们正在分
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:11" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/8-%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/" class="category-chain-item">8.伦理和社会责任</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/">#伦理和社会责任</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E5%92%8C%E5%AE%89%E5%85%A8/" target="_self">
+          数据隐私和安全
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E5%92%8C%E5%AE%89%E5%85%A8/" target="_self">
+        <div>
+          高级提示词工程师| 第八部分：伦理和社会责任| 第二节：数据隐私和安全| 基础知识：数据隐私和安全是AI应用的基石，就像房屋的地基一样，如果地基不稳固，无论房屋多么华丽，都经不起风雨的考验。  数据最小化：只收集完成任务所必需的数据。 数据加密：使用加密技术保护数据不被未授权访问。 访问控制：确保只有授权人员才能访问数据。  代码示例：1234567891011121314151617181920
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:10" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/8-%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/" class="category-chain-item">8.伦理和社会责任</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/">#伦理和社会责任</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/AI%E4%BC%A6%E7%90%86%E5%8E%9F%E5%88%99/" target="_self">
+          AI伦理原则
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/AI%E4%BC%A6%E7%90%86%E5%8E%9F%E5%88%99/" target="_self">
+        <div>
+          高级提示词工程师| 第八部分：伦理和社会责任| 第一节：AI伦理原则| 基础知识：AI伦理原则就像是航海中的指南针，为我们在开发和应用人工智能时提供了方向和约束，确保我们的旅程不偏离道德和法律的航线。  尊重个体：AI系统应当尊重每个人的隐私、权利和尊严。 透明度：AI的决策过程应该是可解释和可理解的，用户应该知道数据如何被使用。 责任归属：开发者和使用者应对AI系统的行为负责。  代码示例：12
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:10" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/8-%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/" class="category-chain-item">8.伦理和社会责任</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/">#伦理和社会责任</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AE%BE%E8%AE%A1%E8%B7%A8%E9%A2%86%E5%9F%9FAI%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D/" target="_self">
+          实践项目-设计跨领域AI系统的高级提示词
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AE%BE%E8%AE%A1%E8%B7%A8%E9%A2%86%E5%9F%9FAI%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D/" target="_self">
+        <div>
+          高级提示词工程师| 第七部分：高级提示词工程| 第四节：实践项目| 基础知识：在本节的实践项目中，我们将综合运用前面章节学到的知识，设计一个能够处理多种任务的跨领域AI系统，并使用高级提示词技术来提升其性能。  系统设计：设计一个能够理解并执行多种任务的AI系统架构。 提示词集成：将高级提示词技术集成到系统中，确保系统能够根据不同的任务自动选择合适的提示词。  代码示例：1234567891011
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 08:56" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/7-%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" class="category-chain-item">7.高级提示词工程</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E8%B7%A8%E9%A2%86%E5%9F%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1/" target="_self">
+          跨领域提示词设计
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E8%B7%A8%E9%A2%86%E5%9F%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1/" target="_self">
+        <div>
+          高级提示词工程师| 第七部分：高级提示词工程| 第三节：跨领域提示词设计| 基础知识：跨领域提示词设计就像是编写一部能够跨越不同文化和语言的通用词典，它需要我们理解不同领域间的共性和差异，以创造出能够广泛应用于多种任务的提示词。  共性挖掘：在不同领域之间寻找共通点，设计能够适用于多个领域的提示词。 差异适应：针对每个领域的独特性调整提示词，以确保其有效性。  代码示例：1234567891011
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 08:56" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/7-%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" class="category-chain-item">7.高级提示词工程</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/22/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%BA%94%E7%94%A8/" target="_self">
+          强化学习中的提示词应用
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/22/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%BA%94%E7%94%A8/" target="_self">
+        <div>
+          高级提示词工程师| 第七部分：高级提示词工程| 第二节：强化学习中的提示词应用| 基础知识：强化学习是一种让智能体通过与环境的交互来学习最优行为策略的方法。在这个过程中，提示词就像是给智能体的一张地图，帮助它在复杂的环境里找到通往目标的路径。  策略提示：提供给智能体关于在特定状态下应采取哪些动作的提示。 奖励提示：指导智能体识别哪些行为会带来更高的回报。  代码示例：12345678910111
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-22 16:54" pubdate>
+              2024-06-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/7-%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" class="category-chain-item">7.高级提示词工程</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/22/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D/" target="_self">
+          多模态学习与提示词
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/22/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D/" target="_self">
+        <div>
+          高级提示词工程师| 第七部分：高级提示词工程| 第一节：多模态学习与提示词| 基础知识：多模态学习就像是在一场音乐会中，不同的乐器协同演奏，创造出比单一乐器更加丰富和动人的音乐。在人工智能中，多模态学习结合了来自不同数据源的信息，如文本、图像、声音等，以获得更深入的理解。  多模态融合：将不同模态的数据融合在一起，以提供更全面的提示词，这有助于模型更好地理解复杂的场景。 同步与异步融合：同步融合指
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-22 16:53" pubdate>
+              2024-06-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/7-%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" class="category-chain-item">7.高级提示词工程</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

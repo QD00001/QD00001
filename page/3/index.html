@@ -1,0 +1,1083 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="use node and hexo to create">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XiaoXiangHuiSite">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="use node and hexo to create">
+<meta property="og:locale">
+<meta property="article:author" content="XiaoXiangHui">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Welcome to Xianghui&#39;s blog, where you need what you need"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/25/AI%E5%B8%83%E5%B1%80B%E8%AE%A1%E5%88%92/" target="_self">
+          AI布局B计划
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/25/AI%E5%B8%83%E5%B1%80B%E8%AE%A1%E5%88%92/" target="_self">
+        <div>
+          | AI布局B计划：第一步：在各大AI平台上创建属于自己的AI机器人AI平台：poe.com
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-25 15:12" pubdate>
+              2024-06-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI%E8%AE%A1%E5%88%92/" class="category-chain-item">AI计划</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/AI%E8%AE%A1%E5%88%92/">#AI计划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/25/AI%E6%8A%80%E6%9C%AF%E6%89%80%E5%B1%9E%E5%85%AC%E5%8F%B8%E4%BF%A1%E6%81%AF/" target="_self">
+          AI技术所属公司信息
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/25/AI%E6%8A%80%E6%9C%AF%E6%89%80%E5%B1%9E%E5%85%AC%E5%8F%B8%E4%BF%A1%E6%81%AF/" target="_self">
+        <div>
+          | AI技术所属公司信息：Assistant、GPT-4、DALL-E-3 和 ChatGPT 由 OpenAI 提供支持。Assistant 和 ChatGPT 使用该gpt-3.5-turbo模型。Claude-instant 和 Claude-2 由 Anthropic 提供支持。PaLM 和 Gemini-Pro 由 Google 提供支持。Llama 2 是一个由 Meta 开发并由 P
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-25 14:57" pubdate>
+              2024-06-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI%E4%BF%A1%E6%81%AF/" class="category-chain-item">AI信息</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/AI%E4%BF%A1%E6%81%AF/">#AI信息</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/25/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B46%E6%9C%8825%E6%97%A5/" target="_self">
+          今日事项-2024年6月25日
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/25/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B46%E6%9C%8825%E6%97%A5/" target="_self">
+        <div>
+          今日事项| 今日事项：2024年6月25日| 事项一：用谷歌邮箱订阅OPEN AI、特斯拉、微软AI消息(√) | 事项二：上传数据库表结构文件，让 AI 来帮我写sql查询语句（√）kimi: 80分，字段注释不清晰的地方，kimi不能理解字段所对应的表名是哪个claude-3-Sonnet: 50分，没有输出表中的全部字段，会出现无中生有的情况Gemini-1.5-Flash-128k：90分
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-25 14:05" pubdate>
+              2024-06-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-chain-item">今日事项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/">#今日事项</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/25/%E7%94%B5%E6%B0%94%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_self">
+          常见的数据类型
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/25/%E7%94%B5%E6%B0%94%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9/" target="_self">
+        <div>
+          电气工程师|| 基础知识：电气工程师在进行自动化控制系统设计和编程时，常用的数据类型通常与控制逻辑、传感器数据、执行器状态等相关。以下是一些常见的数据类型及其使用场景的例子：  布尔型（Boolean）：  用于表示开关状态或条件判断，例如继电器的开&#x2F;关状态（True&#x2F;False）。   整数型（Integer）：  用于计数或表示没有小数部分的数值，如计数器的数值（计数值、序
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-25 11:11" pubdate>
+              2024-06-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">电气工程师</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B%E5%B8%88/">#电气工程师</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C/" target="_self">
+          创建个人品牌
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C/" target="_self">
+        <div>
+          高级提示词工程师| 第十部分：专业发展和职业规划| 第四节：创建个人品牌| 基础知识：创建个人品牌就像是在艺术画廊中展出自己的作品，它让我们有机会向世界展示自己的独特价值和专业成就。  个人定位：明确自己在专业领域中的定位，了解自己的长处和特色。 内容创作：通过撰写文章、制作视频或在社交媒体上分享，展示自己的专业知识和见解。  代码示例：123456789101112131415161718192
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:44" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/10-%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/" class="category-chain-item">10.专业发展和职业规划</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">#专业发展和职业规划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%87%86%E5%A4%87%E7%AE%80%E5%8E%86%E5%92%8C%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/" target="_self">
+          准备简历和面试技巧
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%87%86%E5%A4%87%E7%AE%80%E5%8E%86%E5%92%8C%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/" target="_self">
+        <div>
+          高级提示词工程师| 第十部分：专业发展和职业规划| 第三节：准备简历和面试技巧| 基础知识：准备简历和面试技巧就像是为一场演出精心准备，我们需要确保自己的能力和经验能够得到最好的展示。  简历编写：编写一份精炼、突出重点的简历，确保它能够快速抓住招聘者的注意力。 面试技巧：学习如何回答常见的面试问题，展示自己的技术能力和解决问题的方法。  代码示例：123456789101112131415161
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:43" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/10-%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/" class="category-chain-item">10.专业发展和职业规划</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">#专业发展和职业规划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%BB%BA%E7%AB%8B%E4%B8%93%E4%B8%9A%E7%BD%91%E7%BB%9C/" target="_self">
+          建立专业网络
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%BB%BA%E7%AB%8B%E4%B8%93%E4%B8%9A%E7%BD%91%E7%BB%9C/" target="_self">
+        <div>
+          高级提示词工程师| 第十部分：专业发展和职业规划| 第二节：建立专业网络| 基础知识：建立专业网络就像是在大海中航行时拥有一张航海图，它指引我们与正确的人相遇，共同探索知识的海洋。  社交技巧：学习如何与他人建立联系，进行有效沟通。 专业社群：加入LinkedIn、GitHub等平台上的专业社群，参与讨论和活动。  代码示例：1234567891011121314# 假设我们正在使用LinkedI
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:43" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/10-%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/" class="category-chain-item">10.专业发展和职业规划</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">#专业发展和职业规划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E4%BA%86%E8%A7%A3%E8%A1%8C%E4%B8%9A%E9%9C%80%E6%B1%82%E5%92%8C%E8%81%8C%E4%B8%9A%E6%9C%BA%E4%BC%9A/" target="_self">
+          了解行业需求和职业机会
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E4%BA%86%E8%A7%A3%E8%A1%8C%E4%B8%9A%E9%9C%80%E6%B1%82%E5%92%8C%E8%81%8C%E4%B8%9A%E6%9C%BA%E4%BC%9A/" target="_self">
+        <div>
+          高级提示词工程师| 第十部分：专业发展和职业规划| 第一节：了解行业需求和职业机会| 基础知识：了解行业需求和职业机会就像是在探险前研究地图，它帮助我们识别宝藏的所在，规划最佳的探险路线。  行业趋势：通过研究行业报告和市场分析，了解哪些技术和领域正在兴起。 职业机会：识别不同行业和地区对AI专业人才的需求，发现潜在的职业机会。  代码示例：1234567891011121314# 假设我们正在使
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:43" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/10-%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/" class="category-chain-item">10.专业发展和职业规划</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">#专业发展和职业规划</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E5%9C%A8GitHub%E4%B8%8A%E8%B4%A1%E7%8C%AE%E4%BB%A3%E7%A0%81%E6%88%96%E6%92%B0%E5%86%99%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/" target="_self">
+          实践项目-在GitHub上贡献代码或撰写技术博客
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E5%9C%A8GitHub%E4%B8%8A%E8%B4%A1%E7%8C%AE%E4%BB%A3%E7%A0%81%E6%88%96%E6%92%B0%E5%86%99%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/" target="_self">
+        <div>
+          高级提示词工程师| 第九部分：持续学习和社区参与| 第四节：实践项目| 基础知识：在GitHub上贡献代码或撰写技术博客就像是在知识的海洋中投下自己的石子，虽小却能激起层层涟漪，影响和启发他人。  代码贡献：在GitHub上为开源项目贡献代码，可以帮助项目改进，同时也是提升自己编程技能的好机会。 技术博客：通过撰写技术博客，我们可以分享自己的学习经验、项目心得和行业见解。  代码示例：123456
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:26" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/9-%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/" class="category-chain-item">9.持续学习和社区参与</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/">#持续学习和社区参与</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/24/%E5%8F%82%E5%8A%A0%E7%9B%B8%E5%85%B3%E7%9A%84%E7%A0%94%E8%AE%A8%E4%BC%9A%E5%92%8C%E4%BC%9A%E8%AE%AE/" target="_self">
+          参加相关的研讨会和会议
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/24/%E5%8F%82%E5%8A%A0%E7%9B%B8%E5%85%B3%E7%9A%84%E7%A0%94%E8%AE%A8%E4%BC%9A%E5%92%8C%E4%BC%9A%E8%AE%AE/" target="_self">
+        <div>
+          高级提示词工程师| 第九部分：持续学习和社区参与| 第三节：参加相关的研讨会和会议| 基础知识：参加研讨会和会议就像是进入了一个充满机遇的宝库，我们不仅能获得知识，还能与行业内的专家和同行建立联系。  知识更新：研讨会和会议是获取最新研究和技术动态的重要途径。 人际网络：在这些活动中，我们可以与行业内的专家、学者和企业家建立联系，拓展职业网络。  代码示例：12345678910111213141
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-24 09:25" pubdate>
+              2024-06-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-chain-item">高级提示词工程师</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-chain-item">学习方案</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/9-%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/" class="category-chain-item">9.持续学习和社区参与</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/">#高级提示词工程师</a>
+            
+              <a href="/tags/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/">#持续学习和社区参与</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,774 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="今日事项-2024年7月19日吃透一个算法-堆排序 代码、代码注释与详细解释：123456789101112131415161718192021222324252627282930313233343536373839404142434445def heapify(arr, n, i):    &quot;&quot;&quot;    调整堆的函数，确保堆的性质。        参数:    ar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="今日事项-2024年7月19日">
+<meta property="og:url" content="http://example.com/2024/07/19/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8819%E6%97%A5/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="今日事项-2024年7月19日吃透一个算法-堆排序 代码、代码注释与详细解释：123456789101112131415161718192021222324252627282930313233343536373839404142434445def heapify(arr, n, i):    &quot;&quot;&quot;    调整堆的函数，确保堆的性质。        参数:    ar">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/%E5%A0%86%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B.gif">
+<meta property="article:published_time" content="2024-07-19T08:00:27.000Z">
+<meta property="article:modified_time" content="2024-07-25T09:40:01.601Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="今日事项">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/%E5%A0%86%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B.gif">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>今日事项-2024年7月19日 - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="今日事项-2024年7月19日"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-19 08:00" pubdate>
+          July 19, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          835 wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">今日事项-2024年7月19日</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="今日事项-2024年7月19日"><a href="#今日事项-2024年7月19日" class="headerlink" title="今日事项-2024年7月19日"></a>今日事项-2024年7月19日</h1><h2 id="吃透一个算法-堆排序"><a href="#吃透一个算法-堆排序" class="headerlink" title="吃透一个算法-堆排序"></a>吃透一个算法-堆排序</h2><p><img src="/img/%E5%A0%86%E6%8E%92%E5%BA%8F%E7%A4%BA%E4%BE%8B.gif" srcset="/img/loading.gif" lazyload alt="堆排序示例" title="堆排序示例"></p>
+<h3 id="代码、代码注释与详细解释："><a href="#代码、代码注释与详细解释：" class="headerlink" title="代码、代码注释与详细解释："></a>代码、代码注释与详细解释：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">heapify</span>(<span class="hljs-params">arr, n, i</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    调整堆的函数，确保堆的性质。</span><br><span class="hljs-string">    </span><br><span class="hljs-string">    参数:</span><br><span class="hljs-string">    arr (list): 待排序的数组。</span><br><span class="hljs-string">    n (int): 数组的长度。</span><br><span class="hljs-string">    i (int): 当前节点的索引。</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    largest = i  <span class="hljs-comment"># 初始时假设当前节点是最大的</span><br>    left = <span class="hljs-number">2</span> * i + <span class="hljs-number">1</span>  <span class="hljs-comment"># 左子节点的索引</span><br>    right = <span class="hljs-number">2</span> * i + <span class="hljs-number">2</span>  <span class="hljs-comment"># 右子节点的索引</span><br><br>    <span class="hljs-comment"># 检查左子节点是否存在，并与当前节点比较</span><br>    <span class="hljs-keyword">if</span> left &lt; n <span class="hljs-keyword">and</span> arr[i] &lt; arr[left]:<br>        largest = left  <span class="hljs-comment"># 如果左子节点更大，则更新最大值的索引</span><br><br>    <span class="hljs-comment"># 检查右子节点是否存在，并与当前节点比较</span><br>    <span class="hljs-keyword">if</span> right &lt; n <span class="hljs-keyword">and</span> arr[largest] &lt; arr[right]:<br>        largest = right  <span class="hljs-comment"># 如果右子节点更大，则更新最大值的索引</span><br><br>    <span class="hljs-comment"># 如果最大值的索引不是当前节点，则交换它们，并递归调整最大值节点的子堆</span><br>    <span class="hljs-keyword">if</span> largest != i:<br>        arr[i], arr[largest] = arr[largest], arr[i]  <span class="hljs-comment"># 交换当前节点和最大值节点</span><br>        heapify(arr, n, largest)  <span class="hljs-comment"># 递归调整最大值节点的子堆</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">heap_sort</span>(<span class="hljs-params">arr</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    堆排序算法实现。</span><br><span class="hljs-string">    </span><br><span class="hljs-string">    参数:</span><br><span class="hljs-string">    arr (list): 待排序的数组。</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    n = <span class="hljs-built_in">len</span>(arr)  <span class="hljs-comment"># 获取数组长度</span><br><br>    <span class="hljs-comment"># 构建最大堆</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n // <span class="hljs-number">2</span> - <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>):<br>        heapify(arr, n, i)  <span class="hljs-comment"># 从最后一个非叶子节点开始，向上调整堆</span><br><br>    <span class="hljs-comment"># 交换堆顶元素与最后一个元素，然后重新调整堆</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n - <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>):<br>        arr[i], arr[<span class="hljs-number">0</span>] = arr[<span class="hljs-number">0</span>], arr[i]  <span class="hljs-comment"># 将堆顶元素（最大值）与最后一个元素交换</span><br>        heapify(arr, i, <span class="hljs-number">0</span>)  <span class="hljs-comment"># 重新调整堆，确保堆的性质</span><br><br>    <span class="hljs-keyword">return</span> arr  <span class="hljs-comment"># 返回排序后的数组</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="实际数字带入代码："><a href="#实际数字带入代码：" class="headerlink" title="实际数字带入代码："></a>实际数字带入代码：</h3><p>假设我们有一个数组<code>arr = [4, 10, 3, 5, 1]</code>，我们使用堆排序对其进行排序。</p>
+<ol>
+<li><p><strong>构建最大堆</strong>：</p>
+<ul>
+<li>初始数组：<code>[4, 10, 3, 5, 1]</code></li>
+<li>调整后：<code>[10, 4, 3, 5, 1]</code>（将前四个元素调整为最大堆）</li>
+<li>继续调整：<code>[10, 5, 3, 4, 1]</code>（继续调整前三个元素）</li>
+</ul>
+</li>
+<li><p><strong>交换堆顶元素与最后一个元素</strong>：</p>
+<ul>
+<li>交换后：<code>[1, 5, 3, 4, 10]</code></li>
+<li>重新调整堆：<code>[5, 1, 3, 4, 10]</code></li>
+</ul>
+</li>
+<li><p><strong>重复步骤2</strong>：</p>
+<ul>
+<li>交换后：<code>[4, 1, 3, 5, 10]</code></li>
+<li>重新调整堆：<code>[4, 1, 3, 5, 10]</code>（已经是有序的）</li>
+</ul>
+</li>
+<li><p><strong>最终结果</strong>：</p>
+<ul>
+<li>排序后的数组：<code>[1, 3, 4, 5, 10]</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="中间涉及到的语法知识点："><a href="#中间涉及到的语法知识点：" class="headerlink" title="中间涉及到的语法知识点："></a>中间涉及到的语法知识点：</h3><ol>
+<li><p><strong>函数定义</strong>：</p>
+<ul>
+<li>使用<code>def</code>关键字定义函数。</li>
+<li>函数名和参数列表。</li>
+</ul>
+</li>
+<li><p><strong>参数传递</strong>：</p>
+<ul>
+<li>函数参数<code>arr</code>, <code>n</code>, <code>i</code>的传递。</li>
+</ul>
+</li>
+<li><p><strong>条件判断</strong>：</p>
+<ul>
+<li>使用<code>if</code>语句进行条件判断。</li>
+</ul>
+</li>
+<li><p><strong>索引计算</strong>：</p>
+<ul>
+<li>计算左子节点和右子节点的索引。</li>
+</ul>
+</li>
+<li><p><strong>变量赋值</strong>：</p>
+<ul>
+<li>使用赋值语句更新变量值。</li>
+</ul>
+</li>
+<li><p><strong>交换元素</strong>：</p>
+<ul>
+<li>使用元组解包进行元素交换：<code>arr[i], arr[largest] = arr[largest], arr[i]</code>。</li>
+</ul>
+</li>
+<li><p><strong>递归调用</strong>：</p>
+<ul>
+<li>函数<code>heapify</code>的递归调用。</li>
+</ul>
+</li>
+<li><p><strong>循环结构</strong>：</p>
+<ul>
+<li>使用<code>for</code>循环进行迭代。</li>
+</ul>
+</li>
+<li><p><strong>数组长度获取</strong>：</p>
+<ul>
+<li>使用<code>len(arr)</code>获取数组长度。</li>
+</ul>
+</li>
+<li><p><strong>数组元素访问</strong>：</p>
+<ul>
+<li>使用索引访问数组元素。</li>
+</ul>
+</li>
+<li><p><strong>数组元素修改</strong>：</p>
+<ul>
+<li>直接通过索引对数组元素进行修改。</li>
+</ul>
+</li>
+<li><p><strong>注释</strong>：</p>
+<ul>
+<li>使用<code>#</code>进行单行注释，使用<code>&quot;&quot;&quot;</code>进行多行注释。</li>
+</ul>
+</li>
+</ol>
+<p>详细讲解可以参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_73096566/article/details/128418046?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522172134883916800175788232%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=172134883916800175788232&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-128418046-null-null.142%5Ev100%5Epc_search_result_base4&utm_term=%E5%A0%86%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95&spm=1018.2226.3001.4187">姬如祎-十大经典排序算法—-堆排序（超详细）</a></p>
+<h2 id="看抓包方面的资讯"><a href="#看抓包方面的资讯" class="headerlink" title="看抓包方面的资讯"></a>看抓包方面的资讯</h2><h2 id="看SQL-server-2014中sql语句的执行过程"><a href="#看SQL-server-2014中sql语句的执行过程" class="headerlink" title="看SQL server 2014中sql语句的执行过程"></a>看SQL server 2014中sql语句的执行过程</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-chain-item">今日事项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="print-no-link">#今日事项</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>今日事项-2024年7月19日</div>
+      <div>http://example.com/2024/07/19/今日事项-2024年7月19日/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>July 19, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/20/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8820%E6%97%A5/" title="今日事项-2024年7月20日">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">今日事项-2024年7月20日</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/18/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8818%E6%97%A5/" title="今日事项-2024年7月18日">
+                        <span class="hidden-mobile">今日事项-2024年7月18日</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

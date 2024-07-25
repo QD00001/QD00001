@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="今日事项-2024年7月4日事项一 收集3个实用的经典算法1. 哈希表查找（Hash Table Lookup）产生原因与背景：想象你管理着一个庞大的图书馆，需要快速地根据书名找到书籍的具体位置。哈希表提供了一种快速检索的方法，它通过一个函数（称为哈希函数）将书名映射到一个固定大小的数组索引上。 算法思路：哈希表查找就像是一位图书馔的管理员使用一套高效的分类系统，读者告诉他书名，他就能迅速地根据书">
+<meta property="og:type" content="article">
+<meta property="og:title" content="今日事项-2024年7月4日">
+<meta property="og:url" content="http://example.com/2024/07/04/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%884%E6%97%A5/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="今日事项-2024年7月4日事项一 收集3个实用的经典算法1. 哈希表查找（Hash Table Lookup）产生原因与背景：想象你管理着一个庞大的图书馆，需要快速地根据书名找到书籍的具体位置。哈希表提供了一种快速检索的方法，它通过一个函数（称为哈希函数）将书名映射到一个固定大小的数组索引上。 算法思路：哈希表查找就像是一位图书馔的管理员使用一套高效的分类系统，读者告诉他书名，他就能迅速地根据书">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-07-04T08:12:10.000Z">
+<meta property="article:modified_time" content="2024-07-25T09:40:01.601Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="今日事项">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>今日事项-2024年7月4日 - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="今日事项-2024年7月4日"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiaoXiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-04 08:12" pubdate>
+          July 4, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.4k wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          29 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">今日事项-2024年7月4日</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="今日事项-2024年7月4日"><a href="#今日事项-2024年7月4日" class="headerlink" title="今日事项-2024年7月4日"></a>今日事项-2024年7月4日</h1><h2 id="事项一-收集3个实用的经典算法"><a href="#事项一-收集3个实用的经典算法" class="headerlink" title="事项一 收集3个实用的经典算法"></a>事项一 收集3个实用的经典算法</h2><h3 id="1-哈希表查找（Hash-Table-Lookup）"><a href="#1-哈希表查找（Hash-Table-Lookup）" class="headerlink" title="1. 哈希表查找（Hash Table Lookup）"></a>1. 哈希表查找（Hash Table Lookup）</h3><h4 id="产生原因与背景："><a href="#产生原因与背景：" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你管理着一个庞大的图书馆，需要快速地根据书名找到书籍的具体位置。哈希表提供了一种快速检索的方法，它通过一个函数（称为哈希函数）将书名映射到一个固定大小的数组索引上。</p>
+<h4 id="算法思路："><a href="#算法思路：" class="headerlink" title="算法思路："></a>算法思路：</h4><p>哈希表查找就像是一位图书馔的管理员使用一套高效的分类系统，读者告诉他书名，他就能迅速地根据书名的首字母或者关键词快速定位到书架的区域。</p>
+<h4 id="代码案列："><a href="#代码案列：" class="headerlink" title="代码案列："></a>代码案列：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">HashTable</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, size=<span class="hljs-number">10</span></span>):<br>        self.size = size<br>        self.table = [<span class="hljs-literal">None</span>] * size<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">hash_function</span>(<span class="hljs-params">self, key</span>):<br>        <span class="hljs-comment"># 简单的哈希函数，将字符串转换为数字并取模</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">hash</span>(key) % self.size<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">insert</span>(<span class="hljs-params">self, key, value</span>):<br>        index = self.hash_function(key)<br>        <span class="hljs-comment"># 如果索引位置为空，直接插入</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.table[index]:<br>            self.table[index] = [(key, value)]<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-comment"># 如果有冲突，将元素追加到链表中</span><br>            <span class="hljs-keyword">for</span> pair <span class="hljs-keyword">in</span> self.table[index]:<br>                <span class="hljs-keyword">if</span> pair[<span class="hljs-number">0</span>] == key:<br>                    pair[<span class="hljs-number">1</span>] = value  <span class="hljs-comment"># 更新值</span><br>                    <span class="hljs-keyword">return</span><br>            self.table[index].append((key, value))  <span class="hljs-comment"># 添加新的键值对</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get</span>(<span class="hljs-params">self, key</span>):<br>        index = self.hash_function(key)<br>        <span class="hljs-keyword">if</span> self.table[index]:<br>            <span class="hljs-keyword">for</span> pair <span class="hljs-keyword">in</span> self.table[index]:<br>                <span class="hljs-keyword">if</span> pair[<span class="hljs-number">0</span>] == key:<br>                    <span class="hljs-keyword">return</span> pair[<span class="hljs-number">1</span>]  <span class="hljs-comment"># 返回值</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>  <span class="hljs-comment"># 未找到返回None</span><br><br><span class="hljs-comment"># 使用示例</span><br>hash_table = HashTable()<br>hash_table.insert(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-number">100</span>)<br>hash_table.insert(<span class="hljs-string">&quot;banana&quot;</span>, <span class="hljs-number">200</span>)<br><span class="hljs-built_in">print</span>(hash_table.get(<span class="hljs-string">&quot;apple&quot;</span>))  <span class="hljs-comment"># 输出应该是100</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="算法优缺点："><a href="#算法优缺点：" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：哈希表提供了非常快速的平均时间复杂度为O(1)的查找、插入和删除操作。<br>缺点：哈希表的性能依赖于哈希函数的设计，如果设计不当，可能会产生大量冲突，导致性能下降。</p>
+<h4 id="解决缺点的方法："><a href="#解决缺点的方法：" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>使用更优质的哈希函数来减少冲突，或者使用开放寻址法和链表法等冲突解决策略。</p>
+<h4 id="解决缺点后的代码案例："><a href="#解决缺点后的代码案例：" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><p>略（上面的代码已经展示了使用链表法解决冲突）</p>
+<h4 id="算法的3个实际应用案例："><a href="#算法的3个实际应用案例：" class="headerlink" title="算法的3个实际应用案例："></a>算法的3个实际应用案例：</h4><ul>
+<li><strong>缓存实现</strong>：在Web缓存中，快速检索之前请求过的资源。</li>
+<li><strong>唯一性检查</strong>：在处理大量数据时，快速检查数据是否已存在。</li>
+<li><strong>数据库索引</strong>：在数据库中，加速数据检索操作。</li>
+</ul>
+<h3 id="2-最长公共子序列（Longest-Common-Subsequence-LCS）"><a href="#2-最长公共子序列（Longest-Common-Subsequence-LCS）" class="headerlink" title="2. 最长公共子序列（Longest Common Subsequence, LCS）"></a>2. 最长公共子序列（Longest Common Subsequence, LCS）</h3><h4 id="产生原因与背景：-1"><a href="#产生原因与背景：-1" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你在编写两个版本的软件，需要找出两个版本之间的公共功能模块，这样你可以重用这些模块而不必重新编写。</p>
+<h4 id="算法思路：-1"><a href="#算法思路：-1" class="headerlink" title="算法思路："></a>算法思路：</h4><p>最长公共子序列就像是一位比较购物清单的专家，他找出两份清单中都存在的项目，并确定这些共有项目的最长连续序列。</p>
+<h4 id="代码案列：-1"><a href="#代码案列：-1" class="headerlink" title="代码案列："></a>代码案列：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">longest_common_subsequence</span>(<span class="hljs-params">X, Y</span>):<br>    m, n = <span class="hljs-built_in">len</span>(X), <span class="hljs-built_in">len</span>(Y)<br>    <span class="hljs-comment"># 创建二维数组存储最长公共子序列的长度</span><br>    L = [[<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m + <span class="hljs-number">1</span>)]<br><br>    <span class="hljs-comment"># 填充数组</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, m + <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>):<br>            <span class="hljs-keyword">if</span> X[i - <span class="hljs-number">1</span>] == Y[j - <span class="hljs-number">1</span>]:<br>                L[i][j] = L[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span><br>            <span class="hljs-keyword">else</span>:<br>                L[i][j] = <span class="hljs-built_in">max</span>(L[i - <span class="hljs-number">1</span>][j], L[i][j - <span class="hljs-number">1</span>])<br><br>    <span class="hljs-comment"># 构造LCS</span><br>    i, j = m, n<br>    lcs = []<br>    <span class="hljs-keyword">while</span> i &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> j &gt; <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">if</span> X[i - <span class="hljs-number">1</span>] == Y[j - <span class="hljs-number">1</span>]:<br>            lcs.append(X[i - <span class="hljs-number">1</span>])<br>            i -= <span class="hljs-number">1</span><br>            j -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">elif</span> L[i - <span class="hljs-number">1</span>][j] &gt; L[i][j - <span class="hljs-number">1</span>]:<br>            i -= <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            j -= <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> lcs[::-<span class="hljs-number">1</span>]  <span class="hljs-comment"># 反转列表，因为构造是反向的</span><br><br><span class="hljs-comment"># 使用示例</span><br>X = <span class="hljs-string">&quot;AGGTAB&quot;</span><br>Y = <span class="hljs-string">&quot;GXTXAYB&quot;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Longest Common Subsequence:&quot;</span>, longest_common_subsequence(X, Y))<br></code></pre></td></tr></table></figure>
+
+<h4 id="算法优缺点：-1"><a href="#算法优缺点：-1" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：LCS算法能够找出两个序列的最长公共子序列，这在许多比较和相似度计算的场景中非常有用。<br>缺点：LCS算法的时间复杂度为O(m * n)，其中m和n是两个序列的长度，对于很长的序列，性能可能不是很好。</p>
+<h4 id="解决缺点的方法：-1"><a href="#解决缺点的方法：-1" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>对于更长的序列，可以考虑使用更高效的算法或数据结构，如后缀树或后缀数组。</p>
+<h4 id="解决缺点后的代码案例：-1"><a href="#解决缺点后的代码案例：-1" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><p>略（后缀树或数组的实现较为复杂）</p>
+<h4 id="算法的3个实际应用案例：-1"><a href="#算法的3个实际应用案例：-1" class="headerlink" title="算法的3个实际应用案例："></a>算法的3个实际应用案例：</h4><ul>
+<li><strong>文本比较</strong>：在文档比较工具中，找出两个文本文件的相同部分。</li>
+<li><strong>生物信息学</strong>：在DNA序列分析中，找出不同物种之间的相似基因序列。</li>
+<li><strong>软件版本控制</strong>：在版本控制系统中，确定不同版本代码的共有部分。</li>
+</ul>
+<h3 id="3-欧拉路径和欧拉回路（Eulerian-Path-and-Circuit）"><a href="#3-欧拉路径和欧拉回路（Eulerian-Path-and-Circuit）" class="headerlink" title="3. 欧拉路径和欧拉回路（Eulerian Path and Circuit）"></a>3. 欧拉路径和欧拉回路（Eulerian Path and Circuit）</h3><h4 id="产生原因与背景：-2"><a href="#产生原因与背景：-2" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你是一位城市邮递员，需要设计一条路线，使得你可以恰好访问每个街道一次，然后返回到起点，这样的路线称为欧拉回路。</p>
+<h4 id="算法思路：-2"><a href="#算法思路：-2" class="headerlink" title="算法思路："></a>算法思路：</h4><p>欧拉路径和回路就像是一位旅行者在探索一个由道路连接的城市网络，他尝试找出一条路径，可以访问每条道路一次，并且最终能够回到出发点。</p>
+<h4 id="代码案列：-2"><a href="#代码案列：-2" class="headerlink" title="代码案列："></a>代码案列：</h4><p>略（欧拉路径和回路的算法实现较为复杂，通常涉及图的遍历）</p>
+<h4 id="算法优缺点：-2"><a href="#算法优缺点：-2" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：欧拉路径和回路提供了一种高效访问图中所有边的方法，对于需要遍历所有连接的网络非常有用。<br>缺点：并非所有图都有欧拉路径或回路，这限制了算法的应用范围。</p>
+<h4 id="解决缺点的方法：-2"><a href="#解决缺点的方法：-2" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>在没有欧拉路径或回路的图中，可以寻找接近的解决方案，如汉密尔顿路径或使用其他图遍历算法。</p>
+<h4 id="解决缺点后的代码案例：-2"><a href="#解决缺点后的代码案例：-2" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><p>略（解决方案通常需要特定图的结构分析）</p>
+<h4 id="算法的3个实际应用案例：-2"><a href="#算法的3个实际应用案例：-2" class="headerlink" title="算法的3个实际应用案例："></a>算法的3个实际应用案例：</h4><ul>
+<li><strong>旅行商问题</strong>：在旅行商问题中，寻找访问每个城市一次并返回起点的最短路径。</li>
+<li><strong>数据网络管理</strong>：在数据网络中，确保所有连接都得到适当的维护和检查。</li>
+<li><strong>社交网络分析</strong>：在社交网络中，找出连接所有用户的路径，了解网络的连通性。</li>
+</ul>
+<h2 id="事项二-执行C-计划"><a href="#事项二-执行C-计划" class="headerlink" title="事项二 执行C#计划"></a>事项二 执行C#计划</h2><h3 id="第四阶段：应用开发（10-12个月）"><a href="#第四阶段：应用开发（10-12个月）" class="headerlink" title="第四阶段：应用开发（10-12个月）"></a>第四阶段：应用开发（10-12个月）</h3><h4 id="学习模块：应用开发技能"><a href="#学习模块：应用开发技能" class="headerlink" title="学习模块：应用开发技能"></a>学习模块：应用开发技能</h4><ol>
+<li><p><strong>ASP.NET Core Web开发</strong></p>
+<ul>
+<li><strong>比喻</strong>：ASP.NET Core Web开发就像搭建一个大型购物中心，你需要规划不同的商店（页面）、通道（路由）和顾客服务点（服务端逻辑）。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 定义一个控制器，就像购物中心的接待中心</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">StoreController</span> : <span class="hljs-title">Controller</span> &#123;<br>    <span class="hljs-comment">// 定义一个动作，类似于接待中心的特定服务</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> IActionResult <span class="hljs-title">Index</span>()</span> &#123;<br>        <span class="hljs-keyword">return</span> View(); <span class="hljs-comment">// 显示购物中心的主页面</span><br>    &#125;<br><br>    [<span class="hljs-meta">HttpGet</span>]<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> IActionResult <span class="hljs-title">Checkout</span>()</span> &#123;<br>        <span class="hljs-comment">// 处理顾客结账的逻辑</span><br>        <span class="hljs-keyword">return</span> View(); <span class="hljs-comment">// 显示结账页面</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>异步编程（Asynchronous Programming）</strong></p>
+<ul>
+<li><strong>比喻</strong>：异步编程就像是在线购物，你下了订单（发起异步任务），然后可以继续浏览其他商品（继续执行其他代码），订单准备好了（任务完成），系统会通知你（回调）。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 定义一个异步方法，模拟数据库查询</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;<span class="hljs-built_in">string</span>&gt; <span class="hljs-title">FetchDataAsync</span>()</span> &#123;<br>    <span class="hljs-keyword">await</span> Task.Delay(<span class="hljs-number">1000</span>); <span class="hljs-comment">// 模拟数据库查询的延迟</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Data retrieved asynchronously&quot;</span>; <span class="hljs-comment">// 返回查询结果</span><br>&#125;<br><br><span class="hljs-comment">// 在控制器中使用异步方法</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;IActionResult&gt; <span class="hljs-title">DataAsync</span>()</span> &#123;<br>    <span class="hljs-keyword">var</span> data = <span class="hljs-keyword">await</span> FetchDataAsync(); <span class="hljs-comment">// 等待异步操作完成</span><br>    <span class="hljs-keyword">return</span> View(data); <span class="hljs-comment">// 将数据传递给视图</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>安全性（Security）</strong></p>
+<ul>
+<li><strong>比喻</strong>：Web应用的安全性就像购物中心的安保系统，保护顾客（用户）和商店（应用）不受盗窃（数据泄露）和其他威胁。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 使用过滤器来要求认证，就像购物中心的入口安检</span><br>[<span class="hljs-meta">Authorize</span>] <span class="hljs-comment">// 确保只有认证用户可以访问</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> IActionResult <span class="hljs-title">SecureData</span>()</span> &#123;<br>    <span class="hljs-keyword">return</span> View(); <span class="hljs-comment">// 显示受保护的数据</span><br>&#125;<br><br><span class="hljs-comment">// 使用HTTPS，就像加密的通信线路，防止数据被窃听</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Configure</span>(<span class="hljs-params">IApplicationBuilder app</span>)</span> &#123;<br>    app.UseHttpsRedirection(); <span class="hljs-comment">// 重定向到HTTPS</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>性能优化（Performance Optimization）</strong></p>
+<ul>
+<li><strong>比喻</strong>：性能优化就像是购物中心的交通规划，确保顾客流动顺畅（减少页面加载时间），避免拥堵（提高响应速度）。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 使用缓存来存储重复请求的结果，减少数据库访问</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> IActionResult <span class="hljs-title">CachedData</span>()</span> &#123;<br>    <span class="hljs-keyword">var</span> data = Cache.GetOrCreate(<span class="hljs-string">&quot;myCacheKey&quot;</span>, entry =&gt; &#123;<br>        entry.SetAbsoluteExpiration(TimeSpan.FromMinutes(<span class="hljs-number">10</span>)); <span class="hljs-comment">// 设置缓存过期时间</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Expensive data&quot;</span>; <span class="hljs-comment">// 模拟获取昂贵的数据</span><br>    &#125;);<br>    <span class="hljs-keyword">return</span> Content(data); <span class="hljs-comment">// 返回缓存的数据</span><br>&#125;<br><br><span class="hljs-comment">// 使用异步I/O操作来提高性能</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;FileResult&gt; <span class="hljs-title">DownloadFileAsync</span>()</span> &#123;<br>    <span class="hljs-keyword">var</span> filePath = <span class="hljs-string">&quot;path/to/file&quot;</span>; <span class="hljs-comment">// 文件路径</span><br>    <span class="hljs-keyword">var</span> file = <span class="hljs-keyword">new</span> FileStream(filePath, FileMode.Open); <span class="hljs-comment">// 打开文件流</span><br>    <span class="hljs-keyword">return</span> File(file, <span class="hljs-string">&quot;application/octet-stream&quot;</span>); <span class="hljs-comment">// 异步发送文件</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>测试（Testing）</strong></p>
+<ul>
+<li><strong>比喻</strong>：测试就像是购物中心的消防演习，通过模拟各种情况来确保在真实情况下可以正常运行，及时发现并解决问题。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 编写单元测试，确保方法按预期工作</span><br>[<span class="hljs-meta">Fact</span>] <span class="hljs-comment">// 表示这是一个测试用例</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Add_TwoNumbers_ReturnsCorrectSum</span>()</span> &#123;<br>    <span class="hljs-keyword">var</span> calculator = <span class="hljs-keyword">new</span> Calculator(); <span class="hljs-comment">// 创建一个计算器实例</span><br>    <span class="hljs-keyword">var</span> result = calculator.Add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 调用加法方法</span><br>    Assert.Equal(<span class="hljs-number">5</span>, result); <span class="hljs-comment">// 断言结果应该是5</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>部署（Deployment）</strong></p>
+<ul>
+<li><strong>比喻</strong>：部署就像是购物中心的开业准备，确保所有设施（应用组件）都已就绪，可以迎接顾客（用户）。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 使用Docker容器化应用，简化部署过程</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ConfigureContainer</span>(<span class="hljs-params">IApplicationBuilder app, IWebHostEnvironment env</span>)</span> &#123;<br>    <span class="hljs-keyword">if</span> (env.IsDevelopment()) &#123;<br>        app.UseDeveloperExceptionPage(); <span class="hljs-comment">// 开发环境使用异常页面</span><br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        app.UseExceptionHandler(<span class="hljs-string">&quot;/Error&quot;</span>); <span class="hljs-comment">// 生产环境使用自定义错误页面</span><br>    &#125;<br><br>    app.UseDocker(); <span class="hljs-comment">// 使用Docker容器</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>通过这些生动的比喻和详细的代码示例，你可以更深入地理解如何将C#和.NET Core技能应用于实际的Web开发项目中。这些技能将帮助你构建安全、高效、可维护的Web应用程序。</p>
+<h2 id="事项三-智能仓库管理系统现场调研"><a href="#事项三-智能仓库管理系统现场调研" class="headerlink" title="事项三 智能仓库管理系统现场调研"></a>事项三 智能仓库管理系统现场调研</h2><p>作为一位高级软件开发工程师、业务分析师、智能仓库管理员和现场调研工程师，前往A地的B仓库进行现场调研的目的是采集现场需求，为智能仓库系统WMS的开发提供支持。以下是一份完整的调研流程，以及调研过程中需要注意的事项和应避免的事情：</p>
+<h3 id="调研流程"><a href="#调研流程" class="headerlink" title="调研流程"></a>调研流程</h3><h4 id="1-准备阶段"><a href="#1-准备阶段" class="headerlink" title="1. 准备阶段"></a>1. 准备阶段</h4><ul>
+<li><strong>目标</strong>：确保调研工具和材料的完备性。</li>
+<li><strong>步骤</strong>：<ul>
+<li>确定调研目标和关键问题。</li>
+<li>准备调研问卷、访谈指南和观察表。</li>
+<li>与B仓库管理层沟通，了解基本的仓库运营情况。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-到达现场"><a href="#2-到达现场" class="headerlink" title="2. 到达现场"></a>2. 到达现场</h4><ul>
+<li><strong>目标</strong>：初步了解仓库环境和布局。</li>
+<li><strong>步骤</strong>：<ul>
+<li>安全培训和现场规则介绍。</li>
+<li>初步观察仓库布局、设备和流程。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-管理层访谈"><a href="#3-管理层访谈" class="headerlink" title="3. 管理层访谈"></a>3. 管理层访谈</h4><ul>
+<li><strong>目标</strong>：了解管理层对智能仓库系统的期望和需求。</li>
+<li><strong>步骤</strong>：<ul>
+<li>安排访谈，了解业务目标和管理需求。</li>
+<li>讨论当前仓库管理的挑战和痛点。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-员工访谈"><a href="#4-员工访谈" class="headerlink" title="4. 员工访谈"></a>4. 员工访谈</h4><ul>
+<li><strong>目标</strong>：收集一线员工对现有流程的看法和改进建议。</li>
+<li><strong>步骤</strong>：<ul>
+<li>与不同岗位的员工进行访谈。</li>
+<li>收集关于工作流程、设备使用和系统操作的反馈。</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-现场观察"><a href="#5-现场观察" class="headerlink" title="5. 现场观察"></a>5. 现场观察</h4><ul>
+<li><strong>目标</strong>：观察实际工作流程和操作，识别潜在问题。</li>
+<li><strong>步骤</strong>：<ul>
+<li>观察货物的接收、存储、拣选和发货流程。</li>
+<li>注意操作中的瓶颈、错误和不一致之处。</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-数据收集"><a href="#6-数据收集" class="headerlink" title="6. 数据收集"></a>6. 数据收集</h4><ul>
+<li><strong>目标</strong>：收集与仓库操作相关的数据和指标。</li>
+<li><strong>步骤</strong>：<ul>
+<li>收集库存数据、订单信息和性能指标。</li>
+<li>记录设备使用情况和维护记录。</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-技术评估"><a href="#7-技术评估" class="headerlink" title="7. 技术评估"></a>7. 技术评估</h4><ul>
+<li><strong>目标</strong>：评估现有技术基础设施和潜在的技术需求。</li>
+<li><strong>步骤</strong>：<ul>
+<li>评估现有硬件和软件的兼容性和扩展性。</li>
+<li>确定技术升级和集成的需求。</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-用户需求分析"><a href="#8-用户需求分析" class="headerlink" title="8. 用户需求分析"></a>8. 用户需求分析</h4><ul>
+<li><strong>目标</strong>：分析用户需求，确定系统功能和性能要求。</li>
+<li><strong>步骤</strong>：<ul>
+<li>根据访谈和观察结果，归纳用户需求。</li>
+<li>确定系统必须满足的关键功能和性能指标。</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-调研总结"><a href="#9-调研总结" class="headerlink" title="9. 调研总结"></a>9. 调研总结</h4><ul>
+<li><strong>目标</strong>：整理调研结果，准备报告。</li>
+<li><strong>步骤</strong>：<ul>
+<li>汇总所有收集到的信息和数据。</li>
+<li>撰写调研报告，包括发现的问题和建议。</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-反馈和建议"><a href="#10-反馈和建议" class="headerlink" title="10. 反馈和建议"></a>10. 反馈和建议</h4><ul>
+<li><strong>目标</strong>：向B仓库管理层提供调研反馈和改进建议。</li>
+<li><strong>步骤</strong>：<ul>
+<li>讨论调研结果和建议的实施可能性。</li>
+<li>提供详细的改进方案和时间表。</li>
+</ul>
+</li>
+</ul>
+<h3 id="调研过程中需要注意的事项"><a href="#调研过程中需要注意的事项" class="headerlink" title="调研过程中需要注意的事项"></a>调研过程中需要注意的事项</h3><ul>
+<li><strong>尊重文化和流程</strong>：每个仓库都有自己的工作文化和流程，调研时应尊重并试图理解这些差异。</li>
+<li><strong>安全第一</strong>：始终遵守仓库的安全规则，穿戴必要的安全装备。</li>
+<li><strong>全面收集信息</strong>：确保从不同层级和岗位收集信息，以获得全面的视角。</li>
+<li><strong>保持客观和中立</strong>：在分析和报告时保持客观，避免个人偏见影响结果。</li>
+<li><strong>保护隐私</strong>：在收集和处理数据时，确保遵守隐私保护规定。</li>
+</ul>
+<h3 id="应避免的事情"><a href="#应避免的事情" class="headerlink" title="应避免的事情"></a>应避免的事情</h3><ul>
+<li><strong>避免干扰正常运营</strong>：在调研过程中，尽量避免干扰仓库的正常工作流程。</li>
+<li><strong>避免单方面决策</strong>：不要仅根据个人经验或偏好做出判断，而应基于收集到的数据和信息。</li>
+<li><strong>避免过度承诺</strong>：在调研阶段，避免对可能的解决方案或改进措施做出过度承诺。</li>
+<li><strong>避免忽视细节</strong>：注意观察操作中的小细节，因为它们可能是改进的关键。</li>
+</ul>
+<p>通过遵循上述调研流程和注意事项，您可以确保收集到高质量的数据和信息，为智能仓库系统WMS的开发提供坚实的基础。
+ </p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-chain-item">今日事项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="print-no-link">#今日事项</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>今日事项-2024年7月4日</div>
+      <div>http://example.com/2024/07/04/今日事项-2024年7月4日/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiaoXiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>July 4, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/09/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%889%E6%97%A5/" title="今日事项-2024年7月9日">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">今日事项-2024年7月9日</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/03/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%883%E6%97%A5/" title="今日事项-2024年7月3日">
+                        <span class="hidden-mobile">今日事项-2024年7月3日</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>
