@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="常用网络调试命令ping 用于测试主机之间的网络连通性。1.ping    使用场景: 测试主机之间的网络连通性。     操作步骤: 打开命令行，输入 ping &lt;目标IP或域名&gt;。     例子: ping www.google.com     优点: 简单快速，能够快速检测网络连通性。     缺点: 无法提供网络延迟和丢包率的详细信息。  2.traceroute    使用场">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络调试知识点（20个）">
+<meta property="og:url" content="http://example.com/2024/06/14/20%E4%B8%AA%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="常用网络调试命令ping 用于测试主机之间的网络连通性。1.ping    使用场景: 测试主机之间的网络连通性。     操作步骤: 打开命令行，输入 ping &lt;目标IP或域名&gt;。     例子: ping www.google.com     优点: 简单快速，能够快速检测网络连通性。     缺点: 无法提供网络延迟和丢包率的详细信息。  2.traceroute    使用场">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-06-14T14:55:21.000Z">
+<meta property="article:modified_time" content="2024-07-25T07:28:02.345Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="网络调试命令">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>网络调试知识点（20个） - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="网络调试知识点（20个）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiaoXiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-14 14:55" pubdate>
+          June 14, 2024 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">网络调试知识点（20个）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="常用网络调试命令"><a href="#常用网络调试命令" class="headerlink" title="常用网络调试命令"></a>常用网络调试命令</h1><h2 id="ping-用于测试主机之间的网络连通性。"><a href="#ping-用于测试主机之间的网络连通性。" class="headerlink" title="ping 用于测试主机之间的网络连通性。"></a>ping 用于测试主机之间的网络连通性。</h2><h3 id="1-ping"><a href="#1-ping" class="headerlink" title="1.ping"></a>1.ping</h3><pre><code class="hljs">    使用场景: 测试主机之间的网络连通性。
+    操作步骤: 打开命令行，输入 ping &lt;目标IP或域名&gt;。
+    例子: ping www.google.com
+    优点: 简单快速，能够快速检测网络连通性。
+    缺点: 无法提供网络延迟和丢包率的详细信息。
+</code></pre>
+<h3 id="2-traceroute"><a href="#2-traceroute" class="headerlink" title="2.traceroute"></a>2.traceroute</h3><pre><code class="hljs">    使用场景: 追踪数据包到达目的地的路径。
+    操作步骤: 打开命令行，输入 traceroute &lt;目标IP或域名&gt;。
+    例子: traceroute www.google.com
+    优点: 显示经过的每个路由器和每个跳转的延迟。
+    缺点: 在某些网络中可能被防火墙阻止。
+</code></pre>
+<h3 id="3-nslookup"><a href="#3-nslookup" class="headerlink" title="3.nslookup"></a>3.nslookup</h3><pre><code class="hljs">    使用场景: 查询DNS解析过程和结果。
+    操作步骤: 打开命令行，输入 nslookup &lt;域名&gt;。
+    例子: nslookup www.google.com
+    优点: 能够诊断DNS问题，查看IP地址和DNS服务器信息。
+    缺点: 需要用户了解DNS的工作原理。
+</code></pre>
+<h3 id="4-netstat"><a href="#4-netstat" class="headerlink" title="4.netstat"></a>4.netstat</h3><pre><code class="hljs">    使用场景: 显示网络连接、端口使用情况和路由表。
+    操作步骤: 打开命令行，输入 netstat -an。
+    例子: netstat -an | findstr &quot;LISTENING&quot;
+    优点: 提供当前网络活动和端口使用情况的快照。
+    缺点: 输出信息可能非常多，需要过滤。
+</code></pre>
+<h3 id="5-ipconfig-ifconfig"><a href="#5-ipconfig-ifconfig" class="headerlink" title="5.ipconfig &#x2F; ifconfig"></a>5.ipconfig &#x2F; ifconfig</h3><pre><code class="hljs">    使用场景: 显示或修改本地网络接口的配置。
+    操作步骤: 打开命令行，输入 ipconfig /all (Windows) 或 ifconfig (Linux)。
+    例子: ipconfig /all
+    优点: 显示所有网络接口的详细信息。
+    缺点: Windows和Linux命令不同，输出格式不同。
+</code></pre>
+<h3 id="6-ssh"><a href="#6-ssh" class="headerlink" title="6.ssh"></a>6.ssh</h3><pre><code class="hljs">    使用场景: 安全地访问远程服务器。
+    操作步骤: 打开命令行，输入 ssh &lt;用户名&gt;@&lt;远程主机IP&gt;。
+    例子: ssh user@example.com
+    优点: 加密连接，安全访问远程服务器。
+    缺点: 需要远程服务器配置SSH服务。
+</code></pre>
+<h3 id="7-curl"><a href="#7-curl" class="headerlink" title="7.curl"></a>7.curl</h3><pre><code class="hljs">    使用场景: 传输数据，测试HTTP请求。
+    操作步骤: 打开命令行，输入 curl &lt;URL&gt;。
+    例子: curl -I http://example.com
+    优点: 支持多种协议，能够发送复杂的HTTP请求。
+    缺点: 需要一定的命令行选项知识。
+</code></pre>
+<h3 id="8-scp"><a href="#8-scp" class="headerlink" title="8.scp"></a>8.scp</h3><pre><code class="hljs">    使用场景: 安全地在本地和远程服务器之间复制文件。
+    操作步骤: 打开命令行，输入 scp &lt;本地文件路径&gt; &lt;用户名&gt;@&lt;远程主机IP&gt;:&lt;远程路径&gt;。
+    例子: scp /local/file.txt user@example.com:/remote/directory
+    优点: 使用SSH加密文件传输。
+    缺点: 需要远程服务器配置SSH服务。
+</code></pre>
+<h3 id="9-nmap"><a href="#9-nmap" class="headerlink" title="9.nmap"></a>9.nmap</h3><pre><code class="hljs">    使用场景: 网络发现和安全审计。
+    操作步骤: 打开命令行，输入 nmap &lt;目标IP或网络范围&gt;。
+    例子: nmap -sP 192.168.1.0/24
+    优点: 强大的网络扫描工具，能够发现活跃主机和开放端口。
+    缺点: 扫描可能被网络防火墙或入侵检测系统检测到。
+</code></pre>
+<h3 id="10-telnet"><a href="#10-telnet" class="headerlink" title="10.telnet"></a>10.telnet</h3><pre><code class="hljs">    使用场景: 测试远程系统的端口是否开放。
+    操作步骤: 打开命令行，输入 telnet &lt;目标IP&gt; &lt;端口号&gt;。
+    例子: telnet example.com 80
+    优点: 简单快速地测试端口连通性。
+    缺点: 不加密，不安全，已被SSH和更现代的工具取代。
+</code></pre>
+<h3 id="11-arp"><a href="#11-arp" class="headerlink" title="11.arp"></a>11.arp</h3><pre><code class="hljs">    使用场景: 查看和操作ARP缓存表。
+    操作步骤: 打开命令行，输入 arp -a。
+    例子: arp -a
+    优点: 能够查看IP地址与MAC地址的映射。
+    缺点: 无法修改ARP表，只读。
+</code></pre>
+<h3 id="12-route-ip-route"><a href="#12-route-ip-route" class="headerlink" title="12.route &#x2F; ip route"></a>12.route &#x2F; ip route</h3><pre><code class="hljs">    使用场景: 显示或修改网络路由表。
+    操作步骤: 打开命令行，输入 route print (Windows) 或 ip route show (Linux)。
+    例子: route print
+    优点: 显示当前网络路由信息。
+    缺点: 命令在不同操作系统中有所不同。
+</code></pre>
+<h3 id="13-host"><a href="#13-host" class="headerlink" title="13..host"></a>13..host</h3><pre><code class="hljs">    使用场景: 查询DNS记录。
+    操作步骤: 打开命令行，输入 host &lt;域名&gt;。
+    例子: host www.google.com
+    优点: 简单易用，能够查询多种类型的DNS记录。
+    缺点: 功能没有 nslookup 和 dig 强大。
+</code></pre>
+<h3 id="14-whois"><a href="#14-whois" class="headerlink" title="14..whois"></a>14..whois</h3><pre><code class="hljs">    使用场景: 查询域名或IP地址的注册信息。
+    操作步骤: 打开命令行，输入 whois &lt;域名或IP&gt;。
+    例子: whois google.com
+    优点: 提供域名注册和IP分配的详细信息。
+    缺点: 输出信息可能非常长。
+</code></pre>
+<h3 id="15-tcpdump"><a href="#15-tcpdump" class="headerlink" title="15..tcpdump"></a>15..tcpdump</h3><pre><code class="hljs">    使用场景: 捕获和分析网络流量。
+    操作步骤: 打开命令行，输入 tcpdump -i &lt;接口&gt;。
+    例子: tcpdump -i eth0
+    优点: 强大的包分析工具，能够捕获和过滤网络流量。
+    缺点: 输出信息复杂，需要专业知识来分析。
+</code></pre>
+<h3 id="16-wireshark"><a href="#16-wireshark" class="headerlink" title="16.wireshark"></a>16.wireshark</h3><pre><code class="hljs">    使用场景: 可视化地捕获和分析网络流量。
+    操作步骤: 打开Wireshark程序，选择网络接口，开始捕获。
+    例子: 捕获所有通过eth0接口的流量。
+    优点: 图形界面，易于使用和分析。
+    缺点: 需要安装软件，可能对新手来说学习曲线陡峭。
+</code></pre>
+<h3 id="17-mtr"><a href="#17-mtr" class="headerlink" title="17.mtr"></a>17.mtr</h3><pre><code class="hljs">    使用场景: 综合了traceroute和ping的功能，持续监控网络延迟。
+    操作步骤: 打开命令行，输入 mtr &lt;目标IP或域名&gt;。
+    例子: mtr -r www.google.com
+    优点: 实时显示网络延迟和丢包情况。
+    缺点: 需要安装mtr工具。
+</code></pre>
+<h3 id="18-ssh-keygen"><a href="#18-ssh-keygen" class="headerlink" title="18.ssh-keygen"></a>18.ssh-keygen</h3><pre><code class="hljs">    使用场景: 生成SSH密钥对，用于无密码SSH登录。
+    操作步骤: 打开命令行，输入 ssh-keygen -t rsa。
+    例子: ssh-keygen -t rsa -b 4096
+    优点: 生成的密钥可以用于安全地无密码登录SSH服务器。
+    缺点: 需要配置公钥和私钥。
+</code></pre>
+<h3 id="19-iptables"><a href="#19-iptables" class="headerlink" title="19.iptables"></a>19.iptables</h3><pre><code class="hljs">    使用场景: Linux防火墙规则设置。
+    操作步骤: 打开命令行，输入 iptables -L 查看规则。
+    例子: iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+    优点: 功能强大，可以定制复杂的防火墙规则。
+    缺点: 配置复杂，错误配置可能导致网络不可用。
+</code></pre>
+<h3 id="20-nbtstat"><a href="#20-nbtstat" class="headerlink" title="20.nbtstat"></a>20.nbtstat</h3><pre><code class="hljs">    使用场景: 显示基于NetBIOS的TCP/IP 统计信息，常用于Windows网络调试。
+    操作步骤: 打开命令行，输入 nbtstat -n。
+    例子: nbtstat -n
+    优点: 显示本地NetBIOS名称表和远程机器的NetBIOS名称。
+    缺点: 主要用于Windows环境，Linux用户可能不常用。
+</code></pre>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD/" class="category-chain-item">编程技能</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD/%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4/" class="category-chain-item">网络调试命令</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4/" class="print-no-link">#网络调试命令</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>网络调试知识点（20个）</div>
+      <div>http://example.com/2024/06/14/20个网络调试知识点/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiaoXiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>June 14, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/06/21/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E9%A2%98/" title="基础理论知识题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">基础理论知识题</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/14/20%E4%B8%AA%E5%B8%B8%E7%94%A8windows10%E7%9F%A5%E8%AF%86%E7%82%B9/" title="windows10常用操作（20个）">
+                        <span class="hidden-mobile">windows10常用操作（20个）</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

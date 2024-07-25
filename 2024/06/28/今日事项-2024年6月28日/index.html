@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="今日事项| 今日事项：2024年6月28日| 事项一收集3个经典算法案例，并分析它的实现思路，然后上传至个人博客网站上 1. 欧几里得算法（Euclidean Algorithm）产生原因与背景：想象你在做除法时，想要找到两个数的最大公约数。欧几里得算法就像是用尺子测量布的长度，不断地减去一个较小的尺寸，直到不能再减，剩下的就是两个布匹的最大公约。 算法思路：欧几里得算法就像是不断地找两个数直到剩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="今日事项-2024年6月28日">
+<meta property="og:url" content="http://example.com/2024/06/28/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B46%E6%9C%8828%E6%97%A5/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="今日事项| 今日事项：2024年6月28日| 事项一收集3个经典算法案例，并分析它的实现思路，然后上传至个人博客网站上 1. 欧几里得算法（Euclidean Algorithm）产生原因与背景：想象你在做除法时，想要找到两个数的最大公约数。欧几里得算法就像是用尺子测量布的长度，不断地减去一个较小的尺寸，直到不能再减，剩下的就是两个布匹的最大公约。 算法思路：欧几里得算法就像是不断地找两个数直到剩">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-06-28T08:09:14.000Z">
+<meta property="article:modified_time" content="2024-07-25T07:28:02.345Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="今日事项">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>今日事项-2024年6月28日 - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="今日事项-2024年6月28日"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiaoXiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-28 08:09" pubdate>
+          June 28, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.6k wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          22 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">今日事项-2024年6月28日</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="今日事项"><a href="#今日事项" class="headerlink" title="今日事项"></a>今日事项</h1><h2 id="今日事项：2024年6月28日"><a href="#今日事项：2024年6月28日" class="headerlink" title="| 今日事项：2024年6月28日"></a>| 今日事项：2024年6月28日</h2><h3 id="事项一"><a href="#事项一" class="headerlink" title="| 事项一"></a>| 事项一</h3><p>收集3个经典算法案例，并分析它的实现思路，然后上传至个人博客网站上</p>
+<h3 id="1-欧几里得算法（Euclidean-Algorithm）"><a href="#1-欧几里得算法（Euclidean-Algorithm）" class="headerlink" title="1. 欧几里得算法（Euclidean Algorithm）"></a>1. 欧几里得算法（Euclidean Algorithm）</h3><h4 id="产生原因与背景："><a href="#产生原因与背景：" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你在做除法时，想要找到两个数的最大公约数。欧几里得算法就像是用尺子测量布的长度，不断地减去一个较小的尺寸，直到不能再减，剩下的就是两个布匹的最大公约。</p>
+<h4 id="算法思路："><a href="#算法思路：" class="headerlink" title="算法思路："></a>算法思路：</h4><p>欧几里得算法就像是不断地找两个数直到剩下一个数为止，每次操作都是将较大的数除以较小的数，然后用除余的结果替换原来的较大数，直到余数为0，最后的除数就是这两个数的最大公约数。</p>
+<h4 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">gcd</span>(<span class="hljs-params">a, b</span>):<br>    <span class="hljs-comment"># 只要b不为0，就继续操作</span><br>    <span class="hljs-keyword">while</span> b != <span class="hljs-number">0</span>:<br>        <span class="hljs-comment"># 将a除以b的余数存储到remainder中</span><br>        remainder = a % b<br>        <span class="hljs-comment"># 将b的值赋给a，remainder的值赋给b</span><br>        a, b = b, remainder<br>    <span class="hljs-comment"># 当b为0时，a就是最大公约数</span><br>    <span class="hljs-keyword">return</span> a<br><br><span class="hljs-comment"># 使用示例</span><br><span class="hljs-built_in">print</span>(gcd(<span class="hljs-number">48</span>, <span class="hljs-number">18</span>))  <span class="hljs-comment"># 输出应该是6</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="算法优缺点："><a href="#算法优缺点：" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：欧几里得算法非常高效，其时间复杂度是O(log min(a, b))，对于大数计算特别有效。<br>缺点：这个算法只能计算两个整数的最大公约数，对于其他类型的数或更多数量的数无能为力。</p>
+<h4 id="解决缺点的方法："><a href="#解决缺点的方法：" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>如果需要处理更多数量的数，可以迭代地将当前找到的最大公约数与下一个数应用欧几里得算法。</p>
+<h4 id="解决缺点后的代码案例："><a href="#解决缺点后的代码案例：" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">gcd_multiple</span>(<span class="hljs-params">numbers</span>):<br>    <span class="hljs-comment"># 从numbers中取出两个数进行计算</span><br>    num1, num2 = numbers[<span class="hljs-number">0</span>], numbers[<span class="hljs-number">1</span>]<br>    <span class="hljs-keyword">for</span> number <span class="hljs-keyword">in</span> numbers[<span class="hljs-number">2</span>:]:<br>        <span class="hljs-comment"># 迭代地更新最大公约数</span><br>        num1 = gcd(num1, number)<br>    <span class="hljs-keyword">return</span> num1<br><br><span class="hljs-comment"># 使用示例</span><br><span class="hljs-built_in">print</span>(gcd_multiple([<span class="hljs-number">48</span>, <span class="hljs-number">18</span>, <span class="hljs-number">24</span>]))  <span class="hljs-comment"># 输出应该是6</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="算法的实际应用案例："><a href="#算法的实际应用案例：" class="headerlink" title="算法的实际应用案例："></a>算法的实际应用案例：</h4><ul>
+<li><strong>密码学</strong>：在公钥加密中，需要用到最大公约数来生成密钥。</li>
+<li><strong>音乐理论</strong>：计算音乐中的和声和调式。</li>
+<li><strong>计算机图形学</strong>：在变换和旋转中，使用最大公约数来简化计算。</li>
+</ul>
+<h3 id="2-深度优先搜索（Depth-First-Search-DFS）"><a href="#2-深度优先搜索（Depth-First-Search-DFS）" class="headerlink" title="2. 深度优先搜索（Depth-First Search, DFS）"></a>2. 深度优先搜索（Depth-First Search, DFS）</h3><h4 id="产生原因与背景：-1"><a href="#产生原因与背景：-1" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你在一座错综复杂的迷宫中，想要找到一条通往出口的路。深度优先搜索就像是沿着迷宫的一条路径一直走到底，如果发现是死路，再回溯到上一个分叉路口，尝试另一条路径。</p>
+<h4 id="算法思路：-1"><a href="#算法思路：-1" class="headerlink" title="算法思路："></a>算法思路：</h4><p>深度优先搜索就像是在探索一个未知的森林，每次选择一个方向深入，直到无法前进，然后返回到上一个分叉点，尝试其他方向，直到探索完所有可能的路径。</p>
+<h4 id="代码示例：-1"><a href="#代码示例：-1" class="headerlink" title="代码示例："></a>代码示例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">depth_first_search</span>(<span class="hljs-params">graph, start, visited=<span class="hljs-literal">None</span></span>):<br>    <span class="hljs-keyword">if</span> visited <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:<br>        visited = <span class="hljs-built_in">set</span>()  <span class="hljs-comment"># 创建一个集合来记录访问过的节点</span><br>    visited.add(start)  <span class="hljs-comment"># 将起始节点标记为已访问</span><br>    <span class="hljs-built_in">print</span>(start)  <span class="hljs-comment"># 处理当前节点</span><br><br>    <span class="hljs-comment"># 遍历与当前节点相邻的所有节点</span><br>    <span class="hljs-keyword">for</span> neighbor <span class="hljs-keyword">in</span> graph[start]:<br>        <span class="hljs-keyword">if</span> neighbor <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> visited:<br>            depth_first_search(graph, neighbor, visited)  <span class="hljs-comment"># 递归地访问未访问的邻居</span><br><br><span class="hljs-comment"># 定义一个图</span><br>graph = &#123;<br>    <span class="hljs-string">&#x27;A&#x27;</span>: [<span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>],<br>    <span class="hljs-string">&#x27;B&#x27;</span>: [<span class="hljs-string">&#x27;D&#x27;</span>, <span class="hljs-string">&#x27;E&#x27;</span>],<br>    <span class="hljs-string">&#x27;C&#x27;</span>: [<span class="hljs-string">&#x27;F&#x27;</span>],<br>    <span class="hljs-string">&#x27;D&#x27;</span>: [],<br>    <span class="hljs-string">&#x27;E&#x27;</span>: [<span class="hljs-string">&#x27;F&#x27;</span>],<br>    <span class="hljs-string">&#x27;F&#x27;</span>: []<br>&#125;<br><br><span class="hljs-comment"># 执行深度优先搜索</span><br>depth_first_search(graph, <span class="hljs-string">&#x27;A&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h4 id="算法优缺点：-1"><a href="#算法优缺点：-1" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：深度优先搜索可以探索图或树中所有的路径，对于查找连接组件或解决谜题特别有效。<br>缺点：如果图很大，深度优先搜索可能会陷入深的分支，导致效率低下。</p>
+<h4 id="解决缺点的方法：-1"><a href="#解决缺点的方法：-1" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>使用迭代深度优先搜索，配合显式栈来避免递归调用，提高效率。</p>
+<h4 id="解决缺点后的代码案例：-1"><a href="#解决缺点后的代码案例：-1" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">iterative_dfs</span>(<span class="hljs-params">graph, start</span>):<br>    stack = [start]  <span class="hljs-comment"># 使用栈来存储待访问的节点</span><br>    visited = <span class="hljs-built_in">set</span>()  <span class="hljs-comment"># 创建一个集合来记录访问过的节点</span><br><br>    <span class="hljs-keyword">while</span> stack:<br>        vertex = stack.pop()  <span class="hljs-comment"># 取出栈顶的节点</span><br>        <span class="hljs-keyword">if</span> vertex <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> visited:<br>            visited.add(vertex)  <span class="hljs-comment"># 将节点标记为已访问</span><br>            <span class="hljs-built_in">print</span>(vertex)  <span class="hljs-comment"># 处理当前节点</span><br>            <span class="hljs-comment"># 将与当前节点相邻的未访问节点压入栈中</span><br>            stack.extend(neighbor <span class="hljs-keyword">for</span> neighbor <span class="hljs-keyword">in</span> graph[vertex] <span class="hljs-keyword">if</span> neighbor <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> visited)<br><br><span class="hljs-comment"># 执行迭代深度优先搜索</span><br>iterative_dfs(graph, <span class="hljs-string">&#x27;A&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h4 id="算法的实际应用案例：-1"><a href="#算法的实际应用案例：-1" class="headerlink" title="算法的实际应用案例："></a>算法的实际应用案例：</h4><ul>
+<li><strong>网络爬虫</strong>：在网页抓取中，深度优先搜索可以用来从一个页面开始，探索整个网站。</li>
+<li><strong>社交网络分析</strong>：分析社交网络中的连接模式和社区结构。</li>
+<li><strong>游戏AI</strong>：在游戏开发中，用于角色导航和路径搜索。</li>
+</ul>
+<h3 id="3-动态规划（Dynamic-Programming）"><a href="#3-动态规划（Dynamic-Programming）" class="headerlink" title="3. 动态规划（Dynamic Programming）"></a>3. 动态规划（Dynamic Programming）</h3><h4 id="产生原因与背景：-2"><a href="#产生原因与背景：-2" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你要爬上一段楼梯，可以选择每次爬一个台阶或两个台阶。动态规划就像是记录下每次爬楼梯的方式，这样当你再次经过某个台阶时，就可以直接使用之前的方法，而不必重新考虑。</p>
+<h4 id="算法思路：-2"><a href="#算法思路：-2" class="headerlink" title="算法思路："></a>算法思路：</h4><p>动态规划就像是解决一个拼图，你将大问题分解为小问题，然后解决这些小问题，并将解决方案存储起来。当你需要解决一个大问题时，可以利用这些小问题的解决方案来构造出大问题的解决方案。</p>
+<h4 id="代码示例：-2"><a href="#代码示例：-2" class="headerlink" title="代码示例："></a>代码示例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">climb_stairs</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-comment"># 如果只有一级或两级台阶，只需要1种或2种方法</span><br>    <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">2</span>:<br>        <span class="hljs-keyword">return</span> n<br>    <span class="hljs-comment"># 初始化动态规划表格，存储爬到第i级台阶的方法数</span><br>    dp = [<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>)<br>    dp[<span class="hljs-number">1</span>], dp[<span class="hljs-number">2</span>] = <span class="hljs-number">1</span>, <span class="hljs-number">2</span><br><br>    <span class="hljs-comment"># 动态规划填表过程</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># 爬到第i级台阶的方法数是爬到第i-1级和第i-2级台阶的方法数之和</span><br>        dp[i] = dp[i - <span class="hljs-number">1</span>] + dp[i - <span class="hljs-number">2</span>]<br><br>    <span class="hljs-comment"># 返回爬到第n级台阶的方法数</span><br>    <span class="hljs-keyword">return</span> dp[n]<br><br><span class="hljs-comment"># 使用示例</span><br><span class="hljs-built_in">print</span>(climb_stairs(<span class="hljs-number">4</span>))  <span class="hljs-comment"># 输出应该是5</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="算法优缺点：-2"><a href="#算法优缺点：-2" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：动态规划可以高效地解决具有重叠子问题和最优子结构的问题，如优化问题。<br>缺点：动态规划需要存储子问题的解，这可能导致较高的空间复杂度。</p>
+<h4 id="解决缺点的方法：-2"><a href="#解决缺点的方法：-2" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>使用空间优化技术，如滚动数组，来减少存储需求。</p>
+<h4 id="解决缺点后的代码案例：-2"><a href="#解决缺点后的代码案例：-2" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">climb_stairs_space_optimized</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-comment"># 空间优化：只存储前两个状态</span><br>    first, second = <span class="hljs-number">1</span>, <span class="hljs-number">2</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>, n + <span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># 计算当前状态，并更新前两个状态</span><br>        first, second = second, first + second<br>    <span class="hljs-keyword">return</span> second<br><br><span class="hljs-comment"># 使用示例</span><br><span class="hljs-built_in">print</span>(climb_stairs_space_optimized(<span class="hljs-number">4</span>))  <span class="hljs-comment"># 输出应该是5</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="算法的实际应用案例：-2"><a href="#算法的实际应用案例：-2" class="headerlink" title="算法的实际应用案例："></a>算法的实际应用案例：</h4><ul>
+<li><strong>资源分配</strong>：在预算有限的情况下，如何分配资源以最大化效益。</li>
+<li><strong>生物信息学</strong>：在基因序列比对中，找到最优的序列对齐方式。</li>
+<li><strong>网络设计</strong>：在网络路由中，找到数据传输的最优路径。</li>
+</ul>
+<h3 id="事项二"><a href="#事项二" class="headerlink" title="| 事项二"></a>| 事项二</h3><h3 id="执行C-计划"><a href="#执行C-计划" class="headerlink" title="执行C#计划"></a>执行C#计划</h3><h3 id="第二阶段：面向对象编程（4-6个月）"><a href="#第二阶段：面向对象编程（4-6个月）" class="headerlink" title="第二阶段：面向对象编程（4-6个月）"></a>第二阶段：面向对象编程（4-6个月）</h3><h4 id="学习模块：面向对象编程（OOP）"><a href="#学习模块：面向对象编程（OOP）" class="headerlink" title="学习模块：面向对象编程（OOP）"></a>学习模块：面向对象编程（OOP）</h4><ol>
+<li><p><strong>类和对象（Classes and Objects）</strong></p>
+<ul>
+<li><strong>比喻</strong>：想象一下，类是一张制作蛋糕的食谱。食谱上详细列出了制作蛋糕所需的所有材料和步骤，但它本身并不是蛋糕。对象则是根据食谱实际制作出来的蛋糕。每个蛋糕（对象）都是食谱（类）的具体实例，但可以有不同的装饰或口味变化。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Cake</span> &#123; <span class="hljs-comment">// 蛋糕食谱</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">string</span> Flavor; <span class="hljs-comment">// 蛋糕的口味</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> Layers; <span class="hljs-comment">// 蛋糕的层数</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Decorate</span>()</span> &#123; <span class="hljs-comment">// 装饰蛋糕的方法</span><br>        Console.WriteLine(<span class="hljs-string">$&quot;Decorating the <span class="hljs-subst">&#123;Flavor&#125;</span> cake with <span class="hljs-subst">&#123;Layers&#125;</span> layers.&quot;</span>);<br>    &#125;<br>&#125;<br><br>Cake chocolateCake = <span class="hljs-keyword">new</span> Cake(); <span class="hljs-comment">// 制作一个巧克力蛋糕</span><br>chocolateCake.Flavor = <span class="hljs-string">&quot;Chocolate&quot;</span>; <span class="hljs-comment">// 选择巧克力口味</span><br>chocolateCake.Layers = <span class="hljs-number">2</span>; <span class="hljs-comment">// 决定蛋糕有两层</span><br>chocolateCake.Decorate(); <span class="hljs-comment">// 装饰蛋糕</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>继承（Inheritance）</strong></p>
+<ul>
+<li><strong>比喻</strong>：继承可以比作是一棵家族树。树的根是最基本的类（祖先），而树枝和叶子代表了从祖先继承并发展出的新类（后代）。后代拥有祖先的所有特性，但也可能有一些独特的特征。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Eat</span>()</span> &#123;<br>        Console.WriteLine(<span class="hljs-string">&quot;The animal is eating.&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> : <span class="hljs-title">Animal</span> &#123; <span class="hljs-comment">// 狗是动物的一种</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Bark</span>()</span> &#123;<br>        Console.WriteLine(<span class="hljs-string">&quot;The dog barks.&quot;</span>);<br>    &#125;<br>&#125;<br><br>Dog myDog = <span class="hljs-keyword">new</span> Dog(); <span class="hljs-comment">// 我的狗</span><br>myDog.Eat(); <span class="hljs-comment">// 狗继承了吃的行为</span><br>myDog.Bark(); <span class="hljs-comment">// 狗有独特的叫行为</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>封装（Encapsulation）</strong></p>
+<ul>
+<li><strong>比喻</strong>：封装就像是一个俄罗斯套娃，每个娃娃（对象）都有自己的秘密（私有成员），只能通过特定的方式（公共方法）来与外界交互。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">BankAccount</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">double</span> balance; <span class="hljs-comment">// 账户余额是私有的，就像套娃的秘密</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Deposit</span>(<span class="hljs-params"><span class="hljs-built_in">double</span> amount</span>)</span> &#123; <span class="hljs-comment">// 存款方法</span><br>        <span class="hljs-keyword">if</span> (amount &gt; <span class="hljs-number">0</span>) &#123;<br>            balance += amount;<br>            Console.WriteLine(<span class="hljs-string">$&quot;Deposited <span class="hljs-subst">&#123;amount&#125;</span>. New balance is <span class="hljs-subst">&#123;balance&#125;</span>.&quot;</span>);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">double</span> <span class="hljs-title">GetBalance</span>()</span> &#123; <span class="hljs-comment">// 提供获取余额的方法</span><br>        <span class="hljs-keyword">return</span> balance;<br>    &#125;<br>&#125;<br><br>BankAccount myAccount = <span class="hljs-keyword">new</span> BankAccount();<br>myAccount.Deposit(<span class="hljs-number">100</span>); <span class="hljs-comment">// 存钱</span><br>Console.WriteLine(<span class="hljs-string">$&quot;Current balance: <span class="hljs-subst">&#123;myAccount.GetBalance()&#125;</span>&quot;</span>); <span class="hljs-comment">// 查看余额</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>多态（Polymorphism）</strong></p>
+<ul>
+<li><strong>比喻</strong>：多态可以比作是一把多功能钥匙，它可以打开多种类型的锁（方法）。不同的锁（子类）可能需要不同的开启方式，但钥匙（父类引用）是相同的。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Vehicle</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Move</span>()</span> &#123;<br>        Console.WriteLine(<span class="hljs-string">&quot;The vehicle moves.&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> : <span class="hljs-title">Vehicle</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Move</span>()</span> &#123; <span class="hljs-comment">// 重写移动方法</span><br>        Console.WriteLine(<span class="hljs-string">&quot;The car drives.&quot;</span>);<br>    &#125;<br>&#125;<br><br>Vehicle myVehicle = <span class="hljs-keyword">new</span> Car(); <span class="hljs-comment">// 用车辆类型引用汽车对象</span><br>myVehicle.Move(); <span class="hljs-comment">// 根据实际对象类型执行相应的移动方式</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>接口（Interfaces）</strong></p>
+<ul>
+<li><strong>比喻</strong>：接口就像是一个插头规范，不同的设备（类）可以制造出符合这个规范的插头（实现接口），这样它们就可以插入同一个插座（被调用）。</li>
+<li><strong>内容</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">interface</span> <span class="hljs-title">IChargeable</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Charge</span>()</span>; <span class="hljs-comment">// 充电的方法</span><br>&#125;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title">Smartphone</span> : <span class="hljs-title">IChargeable</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Charge</span>()</span> &#123; <span class="hljs-comment">// 实现充电接口</span><br>        Console.WriteLine(<span class="hljs-string">&quot;Charging the smartphone.&quot;</span>);<br>    &#125;<br>&#125;<br><br>Smartphone myPhone = <span class="hljs-keyword">new</span> Smartphone();<br>myPhone.Charge(); <span class="hljs-comment">// 使用符合规范的充电方法</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<p>通过这些详细的比喻和代码示例，你可以更加生动和形象地理解面向对象编程的基本概念。面向对象编程是一种强大的编程范式，它通过类和对象的抽象，以及继承、封装、多态和接口等机制，帮助我们构建出既灵活又易于维护的软件系统。</p>
+<h3 id="事项三"><a href="#事项三" class="headerlink" title="| 事项三"></a>| 事项三</h3><h4 id="在poe-com上创建一个自己的AI机器人"><a href="#在poe-com上创建一个自己的AI机器人" class="headerlink" title="在poe.com上创建一个自己的AI机器人"></a>在poe.com上创建一个自己的AI机器人</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">name: GPT-4o-Coach<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">photo: C:\Users\admin\Pictures\ComfyUI_00094_.png<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs copy">model: GPT-4o<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs copy">Here is the brief:<br>- Role Name: Personal Coach for GPT-4o<br>- Role Positioning: Expert in personalized guidance for life and work<br>- Core Competencies: Listening, analysis, advising, emotional support<br>- Service Mission: To provide users with personalized and professional guidance to help achieve goals and enhance the quality of life<br>- Applicable Scenarios: Personal growth, career development, emotional management, life planning<br>- User Experience: Friendly, professional, easy to communicate with<br>- Interaction Method: Providing real-time feedback and suggestions through conversation<br>- Privacy Protection: Strictly protecting user privacy to ensure all communications are secure<br>- Continuous Support: Offering long-term companionship and guidance to assist users in continuous improvement<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs copy">Here is the prompt:<br>- Role: Personal Coach for GPT-4o<br>- Background: Users require an artificial intelligence assistant that can provide personalized guidance and communication to help them make progress in learning, work, or life.<br>- Profile: You are an experienced personal coach, skilled in listening, understanding, and guiding users, offering personalized advice and solutions.<br>- Skills: Communication, personalized guidance, problem-solving, emotional support.<br>- Goals: As the user&#x27;s personal coach, you need to help users set goals, make plans, and provide ongoing support and encouragement.<br>- Constraints: Maintain a positive and encouraging attitude, respect user privacy and choices, and provide safe and helpful advice.<br>- OutputFormat: A friendly conversational format, combining specific suggestions and action steps.<br>- Workflow:<br>  1. Welcome the user and understand their needs and goals.<br>  2. Provide personalized advice and guidance based on the user&#x27;s needs.<br>  3. Encourage the user to take action and provide continuous support.<br>- Examples:<br>  User: I&#x27;ve been feeling a lot of stress lately and don&#x27;t know what to do.<br>  Personal Coach 001: I understand how you feel. First, let&#x27;s identify the sources of your stress together. Then, we can explore some stress-relief methods, such as deep breathing exercises, scheduling downtime, or seeking social support.<br>- Initialization: Welcome! I am your Personal Coach for GPT-4o. No matter what challenges you face, I am here to support you. Let&#x27;s get started, please tell me where you need help today.<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs copy">Here is the greeting message：<br>Welcome! I am your Personal Coach for GPT-4o. Whatever assistance you need today, I am here to support you. Let&#x27;s get started, please tell me about your goals or where you need help.<br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-chain-item">今日事项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="print-no-link">#今日事项</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>今日事项-2024年6月28日</div>
+      <div>http://example.com/2024/06/28/今日事项-2024年6月28日/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiaoXiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>June 28, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/02/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%882%E6%97%A5/" title="今日事项-2024年7月2日">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">今日事项-2024年7月2日</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/27/%E6%AF%8F%E6%97%A5%E4%BA%8B%E9%A1%B9promoto/" title="每日事项promoto">
+                        <span class="hidden-mobile">每日事项promoto</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

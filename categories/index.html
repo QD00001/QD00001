@@ -1,0 +1,1731 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="use node and hexo to create">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kategorien">
+<meta property="og:url" content="http://example.com/categories/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="use node and hexo to create">
+<meta property="og:locale">
+<meta property="article:author" content="XiaoXiangHui">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Kategorien - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/building-8830194_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Kategorien"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="高级提示词工程师"
+        id="heading-e11a779029bb76bb5907fb062c1fdd4b" role="tab" data-toggle="collapse" href="#collapse-e11a779029bb76bb5907fb062c1fdd4b"
+        aria-expanded="false"
+      >
+        高级提示词工程师
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>45</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-e11a779029bb76bb5907fb062c1fdd4b"
+           role="tabpanel" aria-labelledby="heading-e11a779029bb76bb5907fb062c1fdd4b">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="学习方案"
+        id="heading-d961753c9089bf43e8cc56e77dc1cc8b" role="tab" data-toggle="collapse" href="#collapse-d961753c9089bf43e8cc56e77dc1cc8b"
+        aria-expanded="false"
+      >
+        学习方案
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>45</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-d961753c9089bf43e8cc56e77dc1cc8b"
+           role="tabpanel" aria-labelledby="heading-d961753c9089bf43e8cc56e77dc1cc8b">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/21/%E6%88%90%E4%B8%BA%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88%E5%92%8C%E6%A1%86%E6%9E%B6/" title="学习方案和框架总览"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">学习方案和框架总览</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="2.编程和算法"
+        id="heading-3adee4163dbed8412ead029cb62fa790" role="tab" data-toggle="collapse" href="#collapse-3adee4163dbed8412ead029cb62fa790"
+        aria-expanded="false"
+      >
+        2.编程和算法
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/2-%E7%BC%96%E7%A8%8B%E5%92%8C%E7%AE%97%E6%B3%95/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>8</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-3adee4163dbed8412ead029cb62fa790"
+           role="tabpanel" aria-labelledby="heading-3adee4163dbed8412ead029cb62fa790">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/22/%E5%85%B3%E5%8D%A17%EF%BC%9A%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE/" title="实践项目"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实践项目</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E5%85%B3%E5%8D%A16%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%93%E7%86%9F%E6%82%89/" title="机器学习库熟悉"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">机器学习库熟悉</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E5%85%B3%E5%8D%A15%EF%BC%9A%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" title="高级编程技巧"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">高级编程技巧</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E5%85%B3%E5%8D%A14%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象编程</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E5%85%B3%E5%8D%A13%EF%BC%9A%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" title="算法基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">算法基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E5%85%B3%E5%8D%A12%EF%BC%9A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" title="数据结构基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据结构基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E5%85%B3%E5%8D%A11%EF%BC%9A%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" title="编程语言基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">编程语言基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E7%BC%96%E7%A8%8B%E5%92%8C%E7%AE%97%E6%B3%95/" title="编程和算法总览"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">编程和算法总览</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="3.数据处理和分析"
+        id="heading-c8bf719331fcc0bca34535e76030674c" role="tab" data-toggle="collapse" href="#collapse-c8bf719331fcc0bca34535e76030674c"
+        aria-expanded="false"
+      >
+        3.数据处理和分析
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/3-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%92%8C%E5%88%86%E6%9E%90/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>6</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-c8bf719331fcc0bca34535e76030674c"
+           role="tabpanel" aria-labelledby="heading-c8bf719331fcc0bca34535e76030674c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/22/%E7%AC%AC%E5%85%AD%E8%8A%82%EF%BC%9A%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%8E%A2%E7%B4%A2%E4%B9%8B%E6%97%85/" title="实践项目的探索之旅"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实践项目的探索之旅</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E7%AC%AC%E4%BA%94%E8%8A%82%EF%BC%9A%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%88%9B%E9%80%A0%E5%8A%9B/" title="特征工程的创造力"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">特征工程的创造力</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E7%AC%AC%E5%9B%9B%E8%8A%82%EF%BC%9A%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E7%A1%80/" title="统计分析的基础"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">统计分析的基础</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E7%AC%AC%E4%B8%89%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AA%97%E5%8F%A3/" title="数据可视化的窗口"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据可视化的窗口</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E7%AC%AC%E4%BA%8C%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%AD%94%E6%B3%95/" title="数据转换的魔法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据转换的魔法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E7%AC%AC%E4%B8%80%E8%8A%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E7%9A%84%E8%89%BA%E6%9C%AF/" title="数据清洗的艺术"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据清洗的艺术</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="8.伦理和社会责任"
+        id="heading-fd0045a41e5f13cd03ca1888a6692a56" role="tab" data-toggle="collapse" href="#collapse-fd0045a41e5f13cd03ca1888a6692a56"
+        aria-expanded="false"
+      >
+        8.伦理和社会责任
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/8-%E4%BC%A6%E7%90%86%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%B4%A3%E4%BB%BB/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-fd0045a41e5f13cd03ca1888a6692a56"
+           role="tabpanel" aria-labelledby="heading-fd0045a41e5f13cd03ca1888a6692a56">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AF%84%E4%BC%B0AI%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%A6%E7%90%86%E5%BD%B1%E5%93%8D/" title="实践项目-评估AI模型的伦理影响"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实践项目-评估AI模型的伦理影响</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E7%AE%97%E6%B3%95%E5%81%8F%E8%A7%81%E5%92%8C%E5%85%AC%E5%B9%B3%E6%80%A7/" title="算法偏见和公平性"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">算法偏见和公平性</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E6%95%B0%E6%8D%AE%E9%9A%90%E7%A7%81%E5%92%8C%E5%AE%89%E5%85%A8/" title="数据隐私和安全"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">数据隐私和安全</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/AI%E4%BC%A6%E7%90%86%E5%8E%9F%E5%88%99/" title="AI伦理原则"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AI伦理原则</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="10.专业发展和职业规划"
+        id="heading-ec2405fd1ef83aa744de38c509258c2a" role="tab" data-toggle="collapse" href="#collapse-ec2405fd1ef83aa744de38c509258c2a"
+        aria-expanded="false"
+      >
+        10.专业发展和职业规划
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/10-%E4%B8%93%E4%B8%9A%E5%8F%91%E5%B1%95%E5%92%8C%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-ec2405fd1ef83aa744de38c509258c2a"
+           role="tabpanel" aria-labelledby="heading-ec2405fd1ef83aa744de38c509258c2a">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/24/%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C/" title="创建个人品牌"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">创建个人品牌</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E5%87%86%E5%A4%87%E7%AE%80%E5%8E%86%E5%92%8C%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/" title="准备简历和面试技巧"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">准备简历和面试技巧</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E5%BB%BA%E7%AB%8B%E4%B8%93%E4%B8%9A%E7%BD%91%E7%BB%9C/" title="建立专业网络"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">建立专业网络</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E4%BA%86%E8%A7%A3%E8%A1%8C%E4%B8%9A%E9%9C%80%E6%B1%82%E5%92%8C%E8%81%8C%E4%B8%9A%E6%9C%BA%E4%BC%9A/" title="了解行业需求和职业机会"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">了解行业需求和职业机会</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="9.持续学习和社区参与"
+        id="heading-07852e6c8bad7f407c756a16063dcd52" role="tab" data-toggle="collapse" href="#collapse-07852e6c8bad7f407c756a16063dcd52"
+        aria-expanded="false"
+      >
+        9.持续学习和社区参与
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/9-%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A4%BE%E5%8C%BA%E5%8F%82%E4%B8%8E/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-07852e6c8bad7f407c756a16063dcd52"
+           role="tabpanel" aria-labelledby="heading-07852e6c8bad7f407c756a16063dcd52">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E5%9C%A8GitHub%E4%B8%8A%E8%B4%A1%E7%8C%AE%E4%BB%A3%E7%A0%81%E6%88%96%E6%92%B0%E5%86%99%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/" title="实践项目-在GitHub上贡献代码或撰写技术博客"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实践项目-在GitHub上贡献代码或撰写技术博客</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E5%8F%82%E5%8A%A0%E7%9B%B8%E5%85%B3%E7%9A%84%E7%A0%94%E8%AE%A8%E4%BC%9A%E5%92%8C%E4%BC%9A%E8%AE%AE/" title="参加相关的研讨会和会议"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">参加相关的研讨会和会议</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E7%A4%BE%E5%8C%BA%E8%AE%A8%E8%AE%BA/" title="参与开源项目和社区讨论"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">参与开源项目和社区讨论</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E9%98%85%E8%AF%BB%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E5%92%8C%E8%A1%8C%E4%B8%9A%E6%8A%A5%E5%91%8A/" title="阅读学术论文和行业报告"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">阅读学术论文和行业报告</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="7.高级提示词工程"
+        id="heading-d99fc3d8784f2ef0c1f924191b8c0fec" role="tab" data-toggle="collapse" href="#collapse-d99fc3d8784f2ef0c1f924191b8c0fec"
+        aria-expanded="false"
+      >
+        7.高级提示词工程
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/7-%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-d99fc3d8784f2ef0c1f924191b8c0fec"
+           role="tabpanel" aria-labelledby="heading-d99fc3d8784f2ef0c1f924191b8c0fec">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/24/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AE%BE%E8%AE%A1%E8%B7%A8%E9%A2%86%E5%9F%9FAI%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D/" title="实践项目-设计跨领域AI系统的高级提示词"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实践项目-设计跨领域AI系统的高级提示词</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/24/%E8%B7%A8%E9%A2%86%E5%9F%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1/" title="跨领域提示词设计"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">跨领域提示词设计</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%BA%94%E7%94%A8/" title="强化学习中的提示词应用"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">强化学习中的提示词应用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E5%A4%9A%E6%A8%A1%E6%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%8F%90%E7%A4%BA%E8%AF%8D/" title="多模态学习与提示词"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">多模态学习与提示词</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="6.提示词工程基础"
+        id="heading-0195d0e643c91ba8ff77b2793c06f4db" role="tab" data-toggle="collapse" href="#collapse-0195d0e643c91ba8ff77b2793c06f4db"
+        aria-expanded="false"
+      >
+        6.提示词工程基础
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/6-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-0195d0e643c91ba8ff77b2793c06f4db"
+           role="tabpanel" aria-labelledby="heading-0195d0e643c91ba8ff77b2793c06f4db">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/22/%E5%AE%9E%E8%B7%B5%E9%A1%B9%E7%9B%AE-%E8%AE%BE%E8%AE%A1%E5%B9%B6%E6%B5%8B%E8%AF%95%E7%89%B9%E5%AE%9A%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D/" title="实践项目-设计并测试特定任务的提示词"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">实践项目-设计并测试特定任务的提示词</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%9C%A8AI%E5%BA%94%E7%94%A8%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/" title="提示词在AI应用中的作用"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">提示词在AI应用中的作用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E8%AE%BE%E8%AE%A1%E6%9C%89%E6%95%88%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D/" title="设计有效的提示词"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">设计有效的提示词</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%88%86%E7%B1%BB/" title="提示词的定义与分类"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">提示词的定义与分类</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="5.深度学习模型构建"
+        id="heading-eb8f5ef06d808d6fbcf89daba3ae9514" role="tab" data-toggle="collapse" href="#collapse-eb8f5ef06d808d6fbcf89daba3ae9514"
+        aria-expanded="false"
+      >
+        5.深度学习模型构建
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/5-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-eb8f5ef06d808d6fbcf89daba3ae9514"
+           role="tabpanel" aria-labelledby="heading-eb8f5ef06d808d6fbcf89daba3ae9514">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/22/%E6%9E%84%E5%BB%BA%E5%92%8C%E8%AF%84%E4%BC%B0%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/" title="构建和评估深度学习模型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">构建和评估深度学习模型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%BE%AE%E8%B0%83%E7%9A%84%E5%8A%9B%E9%87%8F/" title="迁移学习和微调的力量"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">迁移学习和微调的力量</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E4%BC%98%E5%8C%96/" title="深度学习中的正则化与优化"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">深度学习中的正则化与优化</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9E%B6%E6%9E%84%E7%9A%84%E6%8E%A2%E7%B4%A2%E4%B9%8B%E6%97%85/" title="深度学习架构的探索之旅"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">深度学习架构的探索之旅</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="4.机器学习模型构建"
+        id="heading-9b647a04d7ed9e8b61dc7810e260fe8a" role="tab" data-toggle="collapse" href="#collapse-9b647a04d7ed9e8b61dc7810e260fe8a"
+        aria-expanded="false"
+      >
+        4.机器学习模型构建
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/4-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E6%9E%84%E5%BB%BA/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>4</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-9b647a04d7ed9e8b61dc7810e260fe8a"
+           role="tabpanel" aria-labelledby="heading-9b647a04d7ed9e8b61dc7810e260fe8a">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/22/%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%E7%9A%84%E7%A7%91%E5%AD%A6%E6%96%B9%E6%B3%95/" title="模型验证的科学方法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">模型验证的科学方法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E6%A8%A1%E5%9E%8B%E8%B0%83%E5%8F%82%E7%9A%84%E4%BC%98%E5%8C%96%E4%B9%8B%E6%97%85/" title="模型调参的优化之旅"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">模型调参的优化之旅</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E8%BF%87%E6%8B%9F%E5%90%88%E4%B8%8E%E6%AC%A0%E6%8B%9F%E5%90%88%E7%9A%84%E5%B9%B3%E8%A1%A1%E6%9C%AF/" title="过拟合与欠拟合的平衡术"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">过拟合与欠拟合的平衡术</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/22/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E7%9A%84%E8%89%BA%E6%9C%AF/" title="模型选择的艺术"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">模型选择的艺术</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="1.基础理论"
+        id="heading-e4297bd7b3e66c3711671b51b40bd879" role="tab" data-toggle="collapse" href="#collapse-e4297bd7b3e66c3711671b51b40bd879"
+        aria-expanded="false"
+      >
+        1.基础理论
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%A1%88/1-%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>2</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-e4297bd7b3e66c3711671b51b40bd879"
+           role="tabpanel" aria-labelledby="heading-e4297bd7b3e66c3711671b51b40bd879">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/21/%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%EF%BC%88%E6%95%85%E4%BA%8B%E7%89%88%EF%BC%89/" title="基础理论"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础理论</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/21/%E9%AB%98%E7%BA%A7%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E9%A2%98/" title="基础理论知识题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础理论知识题</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="今日事项"
+        id="heading-94ec92a0a81cf36c9f9984556ee3a26d" role="tab" data-toggle="collapse" href="#collapse-94ec92a0a81cf36c9f9984556ee3a26d"
+        aria-expanded="false"
+      >
+        今日事项
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>18</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-94ec92a0a81cf36c9f9984556ee3a26d"
+           role="tabpanel" aria-labelledby="heading-94ec92a0a81cf36c9f9984556ee3a26d">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/07/24/%E4%BB%8A%E6%97%A5%E8%AE%A1%E5%88%92-2024%E5%B9%B47%E6%9C%8824%E6%97%A5/" title="今日计划-2024年7月24日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日计划-2024年7月24日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/23/%E4%BB%8A%E6%97%A5%E8%AE%A1%E5%88%92-2024%E5%B9%B47%E6%9C%8823%E6%97%A5/" title="今日计划-2024年7月23日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日计划-2024年7月23日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/22/%E4%BB%8A%E6%97%A5%E8%AE%A1%E5%88%92-2024%E5%B9%B47%E6%9C%8822%E6%97%A5/" title="今日计划-2024年7月22日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日计划-2024年7月22日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/20/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8820%E6%97%A5/" title="今日事项-2024年7月20日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月20日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/19/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8819%E6%97%A5/" title="今日事项-2024年7月19日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月19日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/18/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8818%E6%97%A5/" title="今日事项-2024年7月18日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月18日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/17/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8817%E6%97%A5/" title="今日事项-2024年7月17日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月17日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/16/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8816%E6%97%A5/" title="今日事项-2024年7月16日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月16日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/15/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8815%E6%97%A5/" title="今日事项-2024年7月15日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月15日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/07/13/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8813%E6%97%A5/" title="今日事项-2024年7月13日"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">今日事项-2024年7月13日</span>
+        </a>
+      
+    
+      
+      
+        <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="list-group-item list-group-item-action">
+          <span class="category-post">More...</span>
+        </a>
+        
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程技能"
+        id="heading-7dfd21dbe1b7fc22da9bc71b84fd7a54" role="tab" data-toggle="collapse" href="#collapse-7dfd21dbe1b7fc22da9bc71b84fd7a54"
+        aria-expanded="false"
+      >
+        编程技能
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>3</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-7dfd21dbe1b7fc22da9bc71b84fd7a54"
+           role="tabpanel" aria-labelledby="heading-7dfd21dbe1b7fc22da9bc71b84fd7a54">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="网络调试命令"
+        id="heading-ba884fd2c7bb6a5117a26d2959ca074c" role="tab" data-toggle="collapse" href="#collapse-ba884fd2c7bb6a5117a26d2959ca074c"
+        aria-expanded="false"
+      >
+        网络调试命令
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD/%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%91%BD%E4%BB%A4/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>2</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-ba884fd2c7bb6a5117a26d2959ca074c"
+           role="tabpanel" aria-labelledby="heading-ba884fd2c7bb6a5117a26d2959ca074c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/14/20%E4%B8%AA%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/" title="网络调试知识点（20个）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">网络调试知识点（20个）</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2024/06/13/%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/" title="网络调试知识点（12个）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">网络调试知识点（12个）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="SQL 知识点"
+        id="heading-1271350374c5dce7fee2d662629c3653" role="tab" data-toggle="collapse" href="#collapse-1271350374c5dce7fee2d662629c3653"
+        aria-expanded="false"
+      >
+        SQL 知识点
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E8%83%BD/SQL-%E7%9F%A5%E8%AF%86%E7%82%B9/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-1271350374c5dce7fee2d662629c3653"
+           role="tabpanel" aria-labelledby="heading-1271350374c5dce7fee2d662629c3653">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/13/SQL%E7%9F%A5%E8%AF%86%E7%82%B9/" title="SQL Server 2014 常用 SQL 语句"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">SQL Server 2014 常用 SQL 语句</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="windows10常用操作"
+        id="heading-49e1d408f6be5a584f84edeaa919a66b" role="tab" data-toggle="collapse" href="#collapse-49e1d408f6be5a584f84edeaa919a66b"
+        aria-expanded="false"
+      >
+        windows10常用操作
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/windows10%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-49e1d408f6be5a584f84edeaa919a66b"
+           role="tabpanel" aria-labelledby="heading-49e1d408f6be5a584f84edeaa919a66b">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/14/20%E4%B8%AA%E5%B8%B8%E7%94%A8windows10%E7%9F%A5%E8%AF%86%E7%82%B9/" title="windows10常用操作（20个）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">windows10常用操作（20个）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="AI计划"
+        id="heading-9298fc860d143b70ec62d9c01676b5d7" role="tab" data-toggle="collapse" href="#collapse-9298fc860d143b70ec62d9c01676b5d7"
+        aria-expanded="false"
+      >
+        AI计划
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/AI%E8%AE%A1%E5%88%92/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-9298fc860d143b70ec62d9c01676b5d7"
+           role="tabpanel" aria-labelledby="heading-9298fc860d143b70ec62d9c01676b5d7">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/25/AI%E5%B8%83%E5%B1%80B%E8%AE%A1%E5%88%92/" title="AI布局B计划"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AI布局B计划</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="AI信息"
+        id="heading-31585358aa4a5c95da5cbc0da533fbe3" role="tab" data-toggle="collapse" href="#collapse-31585358aa4a5c95da5cbc0da533fbe3"
+        aria-expanded="false"
+      >
+        AI信息
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/AI%E4%BF%A1%E6%81%AF/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-31585358aa4a5c95da5cbc0da533fbe3"
+           role="tabpanel" aria-labelledby="heading-31585358aa4a5c95da5cbc0da533fbe3">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/25/AI%E6%8A%80%E6%9C%AF%E6%89%80%E5%B1%9E%E5%85%AC%E5%8F%B8%E4%BF%A1%E6%81%AF/" title="AI技术所属公司信息"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">AI技术所属公司信息</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="问题解决模型"
+        id="heading-63a06704d7ae6ae5e4e40fda7a0b667c" role="tab" data-toggle="collapse" href="#collapse-63a06704d7ae6ae5e4e40fda7a0b667c"
+        aria-expanded="false"
+      >
+        问题解决模型
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%A8%A1%E5%9E%8B/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-63a06704d7ae6ae5e4e40fda7a0b667c"
+           role="tabpanel" aria-labelledby="heading-63a06704d7ae6ae5e4e40fda7a0b667c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/14/%E4%B8%96%E7%95%8C%E4%B8%8A%E5%B9%BF%E6%B3%9B%E8%AE%A4%E5%8F%AF%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%A8%A1%E5%9E%8B/" title="问题解决模型（12个）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">问题解决模型（12个）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="常用工具链接"
+        id="heading-d2caf6280fdc03bb4969ec5ab90a4dc7" role="tab" data-toggle="collapse" href="#collapse-d2caf6280fdc03bb4969ec5ab90a4dc7"
+        aria-expanded="false"
+      >
+        常用工具链接
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%93%BE%E6%8E%A5/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-d2caf6280fdc03bb4969ec5ab90a4dc7"
+           role="tabpanel" aria-labelledby="heading-d2caf6280fdc03bb4969ec5ab90a4dc7">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/14/%E5%B7%A5%E4%BD%9C%E7%BD%91%E5%9D%80%E6%94%B6%E8%97%8F%E5%A4%B9/" title="常用工具链接"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常用工具链接</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="每日事项promoto"
+        id="heading-b652f80946f6b7f9c841dd5d4c37ab72" role="tab" data-toggle="collapse" href="#collapse-b652f80946f6b7f9c841dd5d4c37ab72"
+        aria-expanded="false"
+      >
+        每日事项promoto
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E6%AF%8F%E6%97%A5%E4%BA%8B%E9%A1%B9promoto/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-b652f80946f6b7f9c841dd5d4c37ab72"
+           role="tabpanel" aria-labelledby="heading-b652f80946f6b7f9c841dd5d4c37ab72">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/27/%E6%AF%8F%E6%97%A5%E4%BA%8B%E9%A1%B9promoto/" title="每日事项promoto"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">每日事项promoto</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="电气工程师"
+        id="heading-f8a1cc7750c151a93c6ed374e009172e" role="tab" data-toggle="collapse" href="#collapse-f8a1cc7750c151a93c6ed374e009172e"
+        aria-expanded="false"
+      >
+        电气工程师
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B%E5%B8%88/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-f8a1cc7750c151a93c6ed374e009172e"
+           role="tabpanel" aria-labelledby="heading-f8a1cc7750c151a93c6ed374e009172e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2024/06/25/%E7%94%B5%E6%B0%94%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86%E7%82%B9/" title="常见的数据类型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常见的数据类型</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

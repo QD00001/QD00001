@@ -1,0 +1,970 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="今日事项| 今日事项：2024年6月27日| 事项一收集3个经典算法案例，并分析它的实现思路，然后上传至个人博客网站上 1. 二叉搜索树（Binary Search Tree, BST）产生原因与背景：想象你在一个巨大的果园中，每棵树代表一个数据元素，而你需要快速找到特定的一棵树。如果所有的树按照某种顺序排列，比如从矮到高，你就可以通过比较来快速定位，跳过那些比你目标高的树（或低的树），这正是二叉">
+<meta property="og:type" content="article">
+<meta property="og:title" content="今日事项-2024年6月27日">
+<meta property="og:url" content="http://example.com/2024/06/27/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B46%E6%9C%8827%E6%97%A5/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="今日事项| 今日事项：2024年6月27日| 事项一收集3个经典算法案例，并分析它的实现思路，然后上传至个人博客网站上 1. 二叉搜索树（Binary Search Tree, BST）产生原因与背景：想象你在一个巨大的果园中，每棵树代表一个数据元素，而你需要快速找到特定的一棵树。如果所有的树按照某种顺序排列，比如从矮到高，你就可以通过比较来快速定位，跳过那些比你目标高的树（或低的树），这正是二叉">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/%E5%BD%92%E5%B9%B6%E7%AE%97%E6%B3%95%E7%A4%BA%E4%BE%8B.gif">
+<meta property="article:published_time" content="2024-06-27T08:09:09.000Z">
+<meta property="article:modified_time" content="2024-07-25T07:28:02.345Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="今日事项">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/%E5%BD%92%E5%B9%B6%E7%AE%97%E6%B3%95%E7%A4%BA%E4%BE%8B.gif">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>今日事项-2024年6月27日 - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="今日事项-2024年6月27日"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiaoXiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-27 08:09" pubdate>
+          June 27, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5k wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          42 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">今日事项-2024年6月27日</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="今日事项"><a href="#今日事项" class="headerlink" title="今日事项"></a>今日事项</h1><h2 id="今日事项：2024年6月27日"><a href="#今日事项：2024年6月27日" class="headerlink" title="| 今日事项：2024年6月27日"></a>| 今日事项：2024年6月27日</h2><h3 id="事项一"><a href="#事项一" class="headerlink" title="| 事项一"></a>| 事项一</h3><p>收集3个经典算法案例，并分析它的实现思路，然后上传至个人博客网站上</p>
+<h4 id="1-二叉搜索树（Binary-Search-Tree-BST）"><a href="#1-二叉搜索树（Binary-Search-Tree-BST）" class="headerlink" title="1. 二叉搜索树（Binary Search Tree, BST）"></a>1. 二叉搜索树（Binary Search Tree, BST）</h4><h5 id="产生原因与背景："><a href="#产生原因与背景：" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h5><p>想象你在一个巨大的果园中，每棵树代表一个数据元素，而你需要快速找到特定的一棵树。如果所有的树按照某种顺序排列，比如从矮到高，你就可以通过比较来快速定位，跳过那些比你目标高的树（或低的树），这正是二叉搜索树的灵感来源。</p>
+<h5 id="算法思路："><a href="#算法思路：" class="headerlink" title="算法思路："></a>算法思路：</h5><p>二叉搜索树就像是按高度排列的果园。从任意一棵树开始，如果你要找的树比你当前的位置矮，你就向左走；如果更高，你就向右走。通过这种方式，你可以快速地定位到目标树，或者确定目标树不存在。</p>
+<h5 id="代码示例："><a href="#代码示例：" class="headerlink" title="代码示例："></a>代码示例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeNode</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, key</span>):<br>        <span class="hljs-comment"># 创建一个新树节点，key是树节点的值</span><br>        self.left = <span class="hljs-literal">None</span><br>        self.right = <span class="hljs-literal">None</span><br>        self.val = key<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">insert</span>(<span class="hljs-params">root, key</span>):<br>    <span class="hljs-comment"># 如果树为空，插入新节点作为根节点</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> root:<br>        <span class="hljs-keyword">return</span> TreeNode(key)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-comment"># 如果键值小于根节点的值，递归地在左子树插入</span><br>        <span class="hljs-keyword">if</span> key &lt; root.val:<br>            root.left = insert(root.left, key)<br>        <span class="hljs-comment"># 否则，在右子树插入</span><br>        <span class="hljs-keyword">else</span>:<br>            root.right = insert(root.right, key)<br>    <span class="hljs-comment"># 返回根节点，以便可以继续在上面添加节点</span><br>    <span class="hljs-keyword">return</span> root<br></code></pre></td></tr></table></figure>
+
+<h5 id="算法优缺点："><a href="#算法优缺点：" class="headerlink" title="算法优缺点："></a>算法优缺点：</h5><p>优点：二叉搜索树在平衡的情况下，查找、插入和删除操作都非常快，时间复杂度为O(log n)。<br>缺点：如果树不平衡，即所有节点都只有左或只有右子节点，那么时间复杂度会退化到O(n)。</p>
+<h5 id="解决缺点的方法："><a href="#解决缺点的方法：" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h5><p>通过使用平衡二叉树，如AVL树，每次插入或删除操作后都会进行调整，以保持树的平衡。</p>
+<h5 id="解决缺点后的代码案例："><a href="#解决缺点后的代码案例：" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># AVL树的插入操作示例，这里只展示核心调整部分</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">rotate_right</span>(<span class="hljs-params">y</span>):<br>    <span class="hljs-comment"># 右旋操作，用于保持树的平衡</span><br>    x = y.left<br>    T2 = x.right<br>    x.right = y<br>    y.left = T2<br>    <span class="hljs-keyword">return</span> x<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">insert_avl</span>(<span class="hljs-params">root, key</span>):<br>    <span class="hljs-comment"># 插入节点后，进行平衡调整</span><br>    <span class="hljs-comment"># ...</span><br>    <span class="hljs-comment"># 省略了插入和获取平衡因子的代码</span><br>    <span class="hljs-keyword">if</span> balance_factor &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> key &lt; root.left.val:<br>        <span class="hljs-keyword">return</span> rotate_right(root)<br>    <span class="hljs-comment"># 进行其他必要的旋转操作以保持平衡</span><br>    <span class="hljs-comment"># ...</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="算法的实际应用案例："><a href="#算法的实际应用案例：" class="headerlink" title="算法的实际应用案例："></a>算法的实际应用案例：</h5><ul>
+<li><strong>数据库索引</strong>：快速检索数据记录。</li>
+<li><strong>文件系统</strong>：快速定位文件。</li>
+<li><strong>内存管理</strong>：快速分配和回收内存。</li>
+</ul>
+<h4 id="2-迪杰斯特拉算法（Dijkstra’s-Algorithm）"><a href="#2-迪杰斯特拉算法（Dijkstra’s-Algorithm）" class="headerlink" title="2. 迪杰斯特拉算法（Dijkstra’s Algorithm）"></a>2. 迪杰斯特拉算法（Dijkstra’s Algorithm）</h4><h5 id="产生原因与背景：-1"><a href="#产生原因与背景：-1" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h5><p>想象你要在一张地图上找到从一个城市到所有其他城市的最短路径，如果地图上每个路口都有距离标记，迪杰斯特拉算法就像是一个智能导航系统，帮你规划出最佳路线。</p>
+<h5 id="算法思路：-1"><a href="#算法思路：-1" class="headerlink" title="算法思路："></a>算法思路：</h5><p>迪杰斯特拉算法像是逐步展开的地图，你从起点开始，每次选择最近的未访问城市作为当前位置，然后更新到所有已访问城市的最短路径，直到所有城市都被访问。</p>
+<h5 id="代码示例：-1"><a href="#代码示例：-1" class="headerlink" title="代码示例："></a>代码示例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> heapq<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dijkstra</span>(<span class="hljs-params">graph, start</span>):<br>    distances = &#123;node: <span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;infinity&#x27;</span>) <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> graph&#125;  <span class="hljs-comment"># 初始化所有节点到无穷大距离</span><br>    distances[start] = <span class="hljs-number">0</span>  <span class="hljs-comment"># 起点到自身的距离为0</span><br>    priority_queue = [(<span class="hljs-number">0</span>, start)]  <span class="hljs-comment"># 创建一个优先队列</span><br><br>    <span class="hljs-keyword">while</span> priority_queue:<br>        current_distance, current_node = heapq.heappop(priority_queue)  <span class="hljs-comment"># 从优先队列中取出最近的节点</span><br>        <span class="hljs-keyword">if</span> current_distance &gt; distances[current_node]:  <span class="hljs-comment"># 如果已经找到更短的路径，则跳过</span><br>            <span class="hljs-keyword">continue</span><br><br>        <span class="hljs-comment"># 遍历当前节点的所有邻居</span><br>        <span class="hljs-keyword">for</span> neighbor, weight <span class="hljs-keyword">in</span> graph[current_node].items():<br>            distance = current_distance + weight  <span class="hljs-comment"># 计算到邻居的距离</span><br>            <span class="hljs-comment"># 如果找到了更短的路径，则更新距离并加入优先队列</span><br>            <span class="hljs-keyword">if</span> distance &lt; distances[neighbor]:<br>                distances[neighbor] = distance<br>                heapq.heappush(priority_queue, (distance, neighbor))<br><br>    <span class="hljs-keyword">return</span> distances<br></code></pre></td></tr></table></figure>
+
+<h5 id="算法优缺点：-1"><a href="#算法优缺点：-1" class="headerlink" title="算法优缺点："></a>算法优缺点：</h5><p>优点：迪杰斯特拉算法可以快速找到单源最短路径，特别是在图的边权都是非负的情况下。<br>缺点：如果图中有负权边，迪杰斯特拉算法可能无法正确工作。</p>
+<h5 id="解决缺点的方法：-1"><a href="#解决缺点的方法：-1" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h5><p>对于有负权边的情况，可以使用Bellman-Ford算法，它可以处理负权边，但时间复杂度较高。</p>
+<h5 id="解决缺点后的代码案例：-1"><a href="#解决缺点后的代码案例：-1" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">bellman_ford</span>(<span class="hljs-params">graph, source</span>):<br>    distances = &#123;node: <span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;infinity&#x27;</span>) <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> graph&#125;<br>    distances[source] = <span class="hljs-number">0</span><br><br>    <span class="hljs-comment"># 重复|V|-1次，其中|V|是顶点数</span><br>    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(graph) - <span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> graph:<br>            <span class="hljs-keyword">for</span> neighbor, weight <span class="hljs-keyword">in</span> graph[node].items():<br>                <span class="hljs-keyword">if</span> distances[node] + weight &lt; distances[neighbor]:<br>                    distances[neighbor] = distances[node] + weight<br><br>    <span class="hljs-comment"># 检查负权环</span><br>    <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> graph:<br>        <span class="hljs-keyword">for</span> neighbor, weight <span class="hljs-keyword">in</span> graph[node].items():<br>            <span class="hljs-keyword">if</span> distances[node] + weight &lt; distances[neighbor]:<br>                <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&quot;Graph contains a negative-weight cycle&quot;</span>)<br><br>    <span class="hljs-keyword">return</span> distances<br></code></pre></td></tr></table></figure>
+
+<h5 id="算法的实际应用案例：-1"><a href="#算法的实际应用案例：-1" class="headerlink" title="算法的实际应用案例："></a>算法的实际应用案例：</h5><ul>
+<li><strong>路网导航</strong>：计算从一点到多点的最短行驶距离。</li>
+<li><strong>网络路由</strong>：在网络中找到数据传输的最短路径。</li>
+<li><strong>供应链管理</strong>：优化产品从源头到客户的运输路径。</li>
+</ul>
+<h4 id="3-归并排序（Merge-Sort）"><a href="#3-归并排序（Merge-Sort）" class="headerlink" title="3. 归并排序（Merge Sort）"></a>3. 归并排序（Merge Sort）</h4><p><img src="/img/%E5%BD%92%E5%B9%B6%E7%AE%97%E6%B3%95%E7%A4%BA%E4%BE%8B.gif" srcset="/img/loading.gif" lazyload alt="归并算法示例" title="归并算法示例"></p>
+<h5 id="产生原因与背景：-2"><a href="#产生原因与背景：-2" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h5><p>想象你要整理两大叠混乱的纸张，每叠纸张已经按顺序排列。你可以轻松地将这两叠纸张合并成一叠有序的纸张。归并排序就是模仿这个过程，通过递归地分解和合并来对数据进行排序。</p>
+<h5 id="算法思路：-2"><a href="#算法思路：-2" class="headerlink" title="算法思路："></a>算法思路：</h5><p>归并排序就像是一个熟练的图书管理员整理书架，首先将书籍分成可以单手管理的小堆，然后逐堆整理，最后将这些小堆两两合并，直到所有书籍都有序排列。</p>
+<h5 id="代码示例：-2"><a href="#代码示例：-2" class="headerlink" title="代码示例："></a>代码示例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_sort</span>(<span class="hljs-params">arr</span>):<br>    <span class="hljs-comment"># 基线条件：如果数组只有一个元素或为空，它已经是有序的</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(arr) &lt;= <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> arr<br><br>    <span class="hljs-comment"># 将数组分为两半</span><br>    mid = <span class="hljs-built_in">len</span>(arr) // <span class="hljs-number">2</span><br>    left_half = arr[:mid]<br>    right_half = arr[mid:]<br><br>    <span class="hljs-comment"># 递归地对两半进行排序</span><br>    left_sorted = merge_sort(left_half)<br>    right_sorted = merge_sort(right_half)<br><br>    <span class="hljs-comment"># 合并两个有序数组</span><br>    <span class="hljs-keyword">return</span> merge(left_sorted, right_sorted)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge</span>(<span class="hljs-params">left, right</span>):<br>    result = []<br>    i = j = <span class="hljs-number">0</span><br><br>    <span class="hljs-comment"># 合并过程，选取左右数组中较小的元素，直到任一数组为空</span><br>    <span class="hljs-keyword">while</span> i &lt; <span class="hljs-built_in">len</span>(left) <span class="hljs-keyword">and</span> j &lt; <span class="hljs-built_in">len</span>(right):<br>        <span class="hljs-keyword">if</span> left[i] &lt; right[j]:<br>            result.append(left[i])<br>            i += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            result.append(right[j])<br>            j += <span class="hljs-number">1</span><br><br>    <span class="hljs-comment"># 复制剩余的元素</span><br>    result.extend(left[i:])<br>    result.extend(right[j:])<br><br>    <span class="hljs-keyword">return</span> result<br></code></pre></td></tr></table></figure>
+
+<h5 id="算法优缺点：-2"><a href="#算法优缺点：-2" class="headerlink" title="算法优缺点："></a>算法优缺点：</h5><p>优点：归并排序是一种稳定的排序算法，无论输入数据如何，都能保证O(n log n)的时间复杂度。<br>缺点：归并排序需要额外的内存空间来存储临时数组，这可能在内存受限的情况下成为问题。</p>
+<h5 id="解决缺点的方法：-2"><a href="#解决缺点的方法：-2" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h5><p>可以实施原地归并排序算法，但这样会牺牲一些代码的简洁性和可读性。</p>
+<h5 id="解决缺点后的代码案例：-2"><a href="#解决缺点后的代码案例：-2" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_sort_in_place</span>(<span class="hljs-params">arr, temp_arr, left, right</span>):<br>    <span class="hljs-keyword">if</span> left &lt; right:<br>        mid = (left + right) // <span class="hljs-number">2</span><br>        merge_sort_in_place(arr, temp_arr, left, mid)<br>        merge_sort_in_place(arr, temp_arr, mid + <span class="hljs-number">1</span>, right)<br>        merge_in_place(arr, temp_arr, left, mid, right)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">merge_in_place</span>(<span class="hljs-params">arr, temp_arr, left, mid, right</span>):<br>    i, j = left, mid + <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(left, right + <span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># 复制到临时数组以避免数据覆盖</span><br>        temp_arr[k] = arr[k]<br>    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(left, right + <span class="hljs-number">1</span>):<br>        <span class="hljs-comment"># 合并回原数组</span><br>        <span class="hljs-keyword">if</span> i &gt; mid:<br>            arr[k] = temp_arr[j]<br>            j += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">elif</span> j &gt; right:<br>            arr[k] = temp_arr[i]<br>            i += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">elif</span> temp_arr[i] &lt;= temp_arr[j]:<br>            arr[k] = temp_arr[i]<br>            i += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">else</span>:<br>            arr[k] = temp_arr[j]<br>            j += <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="算法的实际应用案例：-2"><a href="#算法的实际应用案例：-2" class="headerlink" title="算法的实际应用案例："></a>算法的实际应用案例：</h5><ul>
+<li><strong>数据库记录排序</strong>：在数据库查询中，快速对大量记录进行排序。</li>
+<li><strong>大数据处理</strong>：在处理大规模数据集时，有效排序。</li>
+<li><strong>文件排序</strong>：对大型文件中的数据进行排序，可以分步处理和合并结果。</li>
+</ul>
+<h3 id="事项二"><a href="#事项二" class="headerlink" title="| 事项二"></a>| 事项二</h3><p>输出智能仓库控制系统WMS的业务流程及操作流程</p>
+<h4 id="业务流程"><a href="#业务流程" class="headerlink" title="业务流程"></a>业务流程</h4><p>根据WMS仓库系统优化版的功能，可以简单梳理出货物从入库到出库的完整业务流程，具体业务流程需根据现场情况来定，以下流程仅供参考：</p>
+<p>(1)货物入库前的准备：<br>    策略管理：在策略管理模块中，设置条码策略（3.3.1）、入库策略（3.3.2）和拣货策略（3.3.3），以指导后续的入库操作。</p>
+<p>(2)货物到达仓库：<br>    仓储管理：在仓库管理（3.6.1）、库区管理（3.6.2）和库位管理（3.6.3）中，为即将到达的货物分配合适的仓库和库位。</p>
+<p>(3)入库作业：<br>    作业管理：在入库作业（3.8.1）中，创建入库单据，记录货物信息，如货物类型、数量等，并根据入库策略进行操作。</p>
+<p>(4)货物检验：<br>    检验管理：在质检单（3.9.1）中，对货物进行质量检验，确保货物符合入库标准。</p>
+<p>(5)货物上架：<br>    仓储管理：根据规划区域（3.6.4）和库位管理（3.6.3），将货物放置到指定的库位上。</p>
+<p>(6)库存更新：<br>    监控台模块：在库存查询（3.1.6）中，更新货物的库存信息，确保库存数据的准确性。</p>
+<p>(7)货物存储期间的管理：<br>    报警管理：设置库存预警（3.7.2），监控库存水平，防止货物短缺或过剩。<br>    系统管理：通过用户管理（3.4.1）、权限管理（3.4.6）等确保仓库操作的安全性和合规性。</p>
+<p>(8)出库前的准备：<br>    策略管理：在出库策略（3.3.4）中，根据业务需求制定出库规则。</p>
+<p>(9)出库作业：<br>    作业管理：在出库作业（3.8.2）中，根据出库单据进行货物的拣选和准备。</p>
+<p>(10)特殊处理（如有需要）：<br>    特殊处理模块：处理托盘物料变更（3.10.1）、货主变更（3.10.2）等特殊情况。</p>
+<p>(11)货物出库：<br>    仓储管理：在库位管理（3.6.3）中，更新库位状态，标记货物已出库。</p>
+<p>(12)库存再次更新：<br>    监控台模块：在库存查询（3.1.6）中，再次更新库存信息，反映最新的库存状态。</p>
+<p>(13)盘点与核对：<br>    盘点管理：定期进行计划盘点（3.11.1）和盘点单（3.11.2），录入盘点结果（3.11.3），并处理损益单（3.11.4）。</p>
+<p>(14)报表生成：<br>    报表中心模块：在综合报表（3.13）中，生成相关的入库和出库报表，用于分析和决策支持。</p>
+<p>(15)数据交换与系统集成：<br>    接口管理：通过接口配置（3.12.1）和数据交换（如RCS、U8、WCS相关数据），确保WMS系统与其他系统的数据同步。</p>
+<p>这个流程涵盖了从货物到达仓库前的准备工作，到货物最终出库的整个业务流程，确保了货物在仓库中的高效管理和正确流转。</p>
+<h4 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h4><h5 id="1-系统初始化"><a href="#1-系统初始化" class="headerlink" title="1. 系统初始化"></a>1. 系统初始化</h5><ul>
+<li><strong>目标</strong>：完成系统基础配置，确保各模块正常运行。</li>
+<li><strong>步骤</strong>：<ul>
+<li>配置网络连接和服务器参数。</li>
+<li>安装系统软件和必要的补丁。</li>
+<li>设置系统权限和用户角色。</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-用户登录与权限验证"><a href="#2-用户登录与权限验证" class="headerlink" title="2. 用户登录与权限验证"></a>2. 用户登录与权限验证</h5><h6 id="2-1-用户登录"><a href="#2-1-用户登录" class="headerlink" title="2.1 用户登录"></a>2.1 用户登录</h6><ul>
+<li><strong>目标</strong>：允许授权用户访问系统。</li>
+<li><strong>步骤</strong>：<ul>
+<li>输入用户名和密码。</li>
+<li>进行多因素认证（如果启用）。</li>
+</ul>
+</li>
+</ul>
+<h6 id="2-2-权限验证"><a href="#2-2-权限验证" class="headerlink" title="2.2 权限验证"></a>2.2 权限验证</h6><ul>
+<li><strong>目标</strong>：确保用户只能访问授权的功能和数据。</li>
+<li><strong>步骤</strong>：<ul>
+<li>系统自动验证用户角色和权限。</li>
+<li>根据用户角色展示相应的操作界面。</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-货物入库流程"><a href="#3-货物入库流程" class="headerlink" title="3. 货物入库流程"></a>3. 货物入库流程</h5><h6 id="3-1-入库计划"><a href="#3-1-入库计划" class="headerlink" title="3.1 入库计划"></a>3.1 入库计划</h6><ul>
+<li><strong>目标</strong>：根据采购订单制定详细的入库计划。</li>
+<li><strong>步骤</strong>：<ul>
+<li>从ERP系统导入订单数据或手动输入。</li>
+<li>确定预计到货日期和所需资源。</li>
+</ul>
+</li>
+</ul>
+<h6 id="3-2-货物接收"><a href="#3-2-货物接收" class="headerlink" title="3.2 货物接收"></a>3.2 货物接收</h6><ul>
+<li><strong>目标</strong>：确保到货与订单相符，并进行初步检验。</li>
+<li><strong>步骤</strong>：<ul>
+<li>扫描货物条码或RFID标签核对信息。</li>
+<li>检查货物数量和质量，记录异常。</li>
+</ul>
+</li>
+</ul>
+<h6 id="3-3-货位分配"><a href="#3-3-货位分配" class="headerlink" title="3.3 货位分配"></a>3.3 货位分配</h6><ul>
+<li><strong>目标</strong>：根据货物特性和存储策略分配货位。</li>
+<li><strong>步骤</strong>：<ul>
+<li>系统推荐货位或根据特定规则手动分配。</li>
+<li>考虑货物尺寸、重量和存储要求。</li>
+</ul>
+</li>
+</ul>
+<h6 id="3-4-入库登记"><a href="#3-4-入库登记" class="headerlink" title="3.4 入库登记"></a>3.4 入库登记</h6><ul>
+<li><strong>目标</strong>：在系统中记录货物的入库信息。</li>
+<li><strong>步骤</strong>：<ul>
+<li>录入货物详细信息，如SKU、批次、数量等。</li>
+<li>打印并粘贴货位标签，更新库存状态。</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-库存管理"><a href="#4-库存管理" class="headerlink" title="4. 库存管理"></a>4. 库存管理</h5><h6 id="4-1-实时库存更新"><a href="#4-1-实时库存更新" class="headerlink" title="4.1 实时库存更新"></a>4.1 实时库存更新</h6><ul>
+<li><strong>目标</strong>：确保库存数据的准确性和实时性。</li>
+<li><strong>步骤</strong>：<ul>
+<li>系统自动更新库存数量。</li>
+<li>手动更新库存状态，如报废、在检等。</li>
+</ul>
+</li>
+</ul>
+<h6 id="4-2-盘点操作"><a href="#4-2-盘点操作" class="headerlink" title="4.2 盘点操作"></a>4.2 盘点操作</h6><ul>
+<li><strong>目标</strong>：定期核对实际库存与系统记录。</li>
+<li><strong>步骤</strong>：<ul>
+<li>制定盘点计划，包括盘点范围和时间。</li>
+<li>执行盘点，录入盘点结果，系统自动调整库存。</li>
+</ul>
+</li>
+</ul>
+<h6 id="4-3-库存预警"><a href="#4-3-库存预警" class="headerlink" title="4.3 库存预警"></a>4.3 库存预警</h6><ul>
+<li><strong>目标</strong>：预防库存不足或过剩，及时响应。</li>
+<li><strong>步骤</strong>：<ul>
+<li>设置库存预警阈值和通知规则。</li>
+<li>系统自动发送预警通知给相关人员。</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-订单处理"><a href="#5-订单处理" class="headerlink" title="5. 订单处理"></a>5. 订单处理</h5><h6 id="5-1-订单接收"><a href="#5-1-订单接收" class="headerlink" title="5.1 订单接收"></a>5.1 订单接收</h6><ul>
+<li><strong>目标</strong>：从销售系统接收订单信息。</li>
+<li><strong>步骤</strong>：<ul>
+<li>自动导入订单数据或手动输入。</li>
+<li>审核订单信息的完整性和准确性。</li>
+</ul>
+</li>
+</ul>
+<h6 id="5-2-订单预处理"><a href="#5-2-订单预处理" class="headerlink" title="5.2 订单预处理"></a>5.2 订单预处理</h6><ul>
+<li><strong>目标</strong>：准备订单的拣货和发货。</li>
+<li><strong>步骤</strong>：<ul>
+<li>分配订单处理优先级。</li>
+<li>准备必要的包装材料和运输标签。</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-拣货与复核"><a href="#6-拣货与复核" class="headerlink" title="6. 拣货与复核"></a>6. 拣货与复核</h5><h6 id="6-1-拣货作业"><a href="#6-1-拣货作业" class="headerlink" title="6.1 拣货作业"></a>6.1 拣货作业</h6><ul>
+<li><strong>目标</strong>：根据订单要求准确拣选货物。</li>
+<li><strong>步骤</strong>：<ul>
+<li>系统生成拣货单和最优拣货路径。</li>
+<li>拣货员按路径拣选货物，扫描确认。</li>
+</ul>
+</li>
+</ul>
+<h6 id="6-2-复核与打包"><a href="#6-2-复核与打包" class="headerlink" title="6.2 复核与打包"></a>6.2 复核与打包</h6><ul>
+<li><strong>目标</strong>：确保拣选货物的准确性，并准备发货。</li>
+<li><strong>步骤</strong>：<ul>
+<li>对拣选的货物进行数量和条件复核。</li>
+<li>根据货物特性进行打包，并贴上运输标签。</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-货物出库"><a href="#7-货物出库" class="headerlink" title="7. 货物出库"></a>7. 货物出库</h5><h6 id="7-1-出库准备"><a href="#7-1-出库准备" class="headerlink" title="7.1 出库准备"></a>7.1 出库准备</h6><ul>
+<li><strong>目标</strong>：确保出库货物信息的准确性，并准备必要的文件。</li>
+<li><strong>步骤</strong>：<ul>
+<li>录入或确认出库信息，如客户、地址、运输方式等。</li>
+<li>打印发货标签和运输文件。</li>
+</ul>
+</li>
+</ul>
+<h6 id="7-2-出库扫描与发货"><a href="#7-2-出库扫描与发货" class="headerlink" title="7.2 出库扫描与发货"></a>7.2 出库扫描与发货</h6><ul>
+<li><strong>目标</strong>：更新出库信息，确保库存数据的准确性。</li>
+<li><strong>步骤</strong>：<ul>
+<li>扫描出库货物的条码或RFID标签。</li>
+<li>更新库存状态，记录发货信息，通知运输部门。</li>
+</ul>
+</li>
+</ul>
+<h5 id="8-报表与分析"><a href="#8-报表与分析" class="headerlink" title="8. 报表与分析"></a>8. 报表与分析</h5><h6 id="8-1-报表生成"><a href="#8-1-报表生成" class="headerlink" title="8.1 报表生成"></a>8.1 报表生成</h6><ul>
+<li><strong>目标</strong>：提供详细的业务和库存报表，支持决策。</li>
+<li><strong>步骤</strong>：<ul>
+<li>根据需求生成各类报表，如入库、出库、库存报表等。</li>
+<li>支持报表的导出、打印和邮件发送。</li>
+</ul>
+</li>
+</ul>
+<h6 id="8-2-数据分析"><a href="#8-2-数据分析" class="headerlink" title="8.2 数据分析"></a>8.2 数据分析</h6><ul>
+<li><strong>目标</strong>：分析报表数据，发现业务趋势和潜在问题。</li>
+<li><strong>步骤</strong>：<ul>
+<li>使用数据分析工具识别关键指标。</li>
+<li>制作图表和报告，为管理层提供决策支持。</li>
+</ul>
+</li>
+</ul>
+<h5 id="9-系统维护与升级"><a href="#9-系统维护与升级" class="headerlink" title="9. 系统维护与升级"></a>9. 系统维护与升级</h5><ul>
+<li><strong>目标</strong>：确保系统长期稳定运行，适应业务发展。</li>
+<li><strong>步骤</strong>：<ul>
+<li>定期检查系统性能，优化数据库。</li>
+<li>定期备份数据，确保数据安全。</li>
+<li>应用系统更新和安全补丁。</li>
+</ul>
+</li>
+</ul>
+<h5 id="10-客户服务与反馈"><a href="#10-客户服务与反馈" class="headerlink" title="10. 客户服务与反馈"></a>10. 客户服务与反馈</h5><ul>
+<li><strong>目标</strong>：提供优质的客户服务，持续改进系统。</li>
+<li><strong>步骤</strong>：<ul>
+<li>建立用户反馈机制，收集用户意见。</li>
+<li>定期培训用户，提高系统使用效率。</li>
+<li>快速响应用户问题，提供技术支持。</li>
+</ul>
+</li>
+</ul>
+<h5 id="附录：故障排除指南"><a href="#附录：故障排除指南" class="headerlink" title="附录：故障排除指南"></a>附录：故障排除指南</h5><ul>
+<li><strong>目标</strong>：为用户提供常见问题的解决方案。</li>
+<li><strong>内容</strong>：<ul>
+<li>列出常见问题及其解决方法。</li>
+<li>提供联系技术支持的渠道和步骤。</li>
+</ul>
+</li>
+</ul>
+<p>请根据实际业务需求和系统功能调整上述操作流程。如果需要进一步定制或自动化特定流程，请与系统管理员或技术支持团队联系。</p>
+<h3 id="事项三"><a href="#事项三" class="headerlink" title="事项三"></a>事项三</h3><p>执行C#计划</p>
+<h4 id="第一阶段：基础建设（1-3个月）"><a href="#第一阶段：基础建设（1-3个月）" class="headerlink" title="第一阶段：基础建设（1-3个月）"></a>第一阶段：基础建设（1-3个月）</h4><h5 id="学习模块：C-基础语法"><a href="#学习模块：C-基础语法" class="headerlink" title="学习模块：C#基础语法"></a>学习模块：C#基础语法</h5><p><strong>比喻</strong>：想象编程语言就像学习一门新的语言，C#就像是学习英语，基础语法就像是学习字母和基本的单词。</p>
+<ol>
+<li><p><strong>变量和数据类型（Variables and Data Types）</strong></p>
+<ul>
+<li><strong>比喻</strong>：变量就像是你的名字标签，它告诉你这个存储空间是用来放什么的。数据类型则像是标签上的分类，比如“水果”或“蔬菜”。</li>
+<li><strong>内容</strong>：学习如何声明变量（<code>int</code>, <code>string</code>, <code>bool</code>等），以及它们的基本用途。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">int</span> age = <span class="hljs-number">25</span>; <span class="hljs-comment">// 想象这里age是一个装着数字25的盒子</span><br><span class="hljs-built_in">string</span> name = <span class="hljs-string">&quot;Alice&quot;</span>; <span class="hljs-comment">// name是一个装着名字&quot;Alice&quot;的标签</span><br><span class="hljs-built_in">bool</span> isStudent = <span class="hljs-literal">true</span>; <span class="hljs-comment">// isStudent是一个开关，true表示开，false表示关</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>控制结构（Control Structures）</strong></p>
+<ul>
+<li><strong>if语句</strong>：就像是一个门卫，检查条件是否满足，如果满足就让你通过。</li>
+<li><strong>switch语句</strong>：可以想象成一个多路口的交通灯，根据条件选择不同的路径。</li>
+<li><strong>循环（Loops）</strong>：循环就像是你每天重复的刷牙动作，只要条件满足，就会一直重复执行。</li>
+<li><strong>if语句</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">if</span> (age &gt;= <span class="hljs-number">18</span>) &#123;<br>    Console.WriteLine(<span class="hljs-string">&quot;You are an adult.&quot;</span>); <span class="hljs-comment">// 如果年龄大于等于18，就告诉你成年了</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><strong>switch语句</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">switch</span> (dayOfWeek) &#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Monday&quot;</span>:<br>        Console.WriteLine(<span class="hljs-string">&quot;Start of the week!&quot;</span>);<br>        <span class="hljs-keyword">break</span>; <span class="hljs-comment">// 每个case结束后都要用break停止</span><br>    <span class="hljs-comment">// 更多case...</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><strong>循环（Loops）</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123; <span class="hljs-comment">// 从0数到9，就像数手指一样</span><br>    Console.WriteLine(i); <span class="hljs-comment">// 每次循环打印当前的数字</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>数组（Arrays）</strong></p>
+<ul>
+<li><strong>比喻</strong>：数组就像是一排排的书架，每个书架上都可以放相同类型的书籍（元素）。</li>
+<li><strong>内容</strong>：学习如何声明和使用数组，包括访问和修改数组中的元素。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>[<span class="hljs-number">5</span>]; <span class="hljs-comment">// 创建一个有5个空位的数字书架</span><br>numbers[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>; <span class="hljs-comment">// 把数字10放在第一个书架上</span><br>Console.WriteLine(numbers[<span class="hljs-number">0</span>]); <span class="hljs-comment">// 读取第一个书架上的数字</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>字符串操作（String Manipulation）</strong></p>
+<ul>
+<li><strong>比喻</strong>：字符串就像是一句话或者一段故事，你可以读取它、修改它，甚至可以把它分成几个部分。</li>
+<li><strong>内容</strong>：学习字符串的基本操作，如连接（<code>+</code>）、长度获取（<code>Length</code>属性）、子字符串（<code>Substring</code>方法）等。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">string</span> greeting = <span class="hljs-string">&quot;Hello, &quot;</span> + name; <span class="hljs-comment">// 把&quot;Hello, &quot;和name拼接起来，像是做三明治</span><br>Console.WriteLine(greeting); <span class="hljs-comment">// 打印拼接后的字符串</span><br><span class="hljs-built_in">string</span> city = <span class="hljs-string">&quot;New York&quot;</span>; <span class="hljs-comment">// city是一个装着&quot;New York&quot;的盒子</span><br><span class="hljs-built_in">int</span> cityLength = city.Length; <span class="hljs-comment">// 测量盒子里内容的长度</span><br><span class="hljs-built_in">string</span> partOfCity = city.Substring(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 取出&quot;New York&quot;中的&quot;New&quot;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>函数（Functions）</strong></p>
+<ul>
+<li><strong>比喻</strong>：函数就像是食谱，它告诉你如何制作一道菜，你需要提供原料（参数），然后按照步骤（代码块）来完成。</li>
+<li><strong>内容</strong>：学习如何定义函数，以及如何调用它们。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SayHello</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> person</span>)</span> &#123; <span class="hljs-comment">// 定义一个函数，它接受一个人的名字</span><br>    Console.WriteLine(<span class="hljs-string">$&quot;Hello, <span class="hljs-subst">&#123;person&#125;</span>!&quot;</span>); <span class="hljs-comment">// 打印问候语</span><br>&#125;<br>SayHello(name); <span class="hljs-comment">// 调用函数，传入name变量</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>输入和输出（Input and Output）</strong></p>
+<ul>
+<li><strong>Console.WriteLine</strong>：就像是用笔在纸上写字，你可以把信息输出到控制台。</li>
+<li><strong>Console.ReadLine</strong>：就像是听别人说话，你可以从控制台接收输入。</li>
+<li><strong>Console.WriteLine</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">Console.WriteLine(<span class="hljs-string">&quot;Enter your name: &quot;</span>); <span class="hljs-comment">// 打印提示信息，就像问别人名字</span><br></code></pre></td></tr></table></figure></li>
+<li><strong>Console.ReadLine</strong>：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">string</span> userName = Console.ReadLine(); <span class="hljs-comment">// 读取用户输入的名字，像听别人告诉你他的名字</span><br>Console.WriteLine(<span class="hljs-string">$&quot;Nice to meet you, <span class="hljs-subst">&#123;userName&#125;</span>!&quot;</span>); <span class="hljs-comment">// 打印欢迎语</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>命名空间（Namespaces）</strong></p>
+<ul>
+<li><strong>比喻</strong>：命名空间就像是图书馆的不同区域，每个区域都有不同的书籍（类和方法）。</li>
+<li><strong>内容</strong>：学习如何使用<code>using</code>指令来包含命名空间，以便使用它们提供的功能。 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> System; <span class="hljs-comment">// 包含System命名空间，就像进入了一个有很多工具的房间</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>注释（Comments）</strong></p>
+<ul>
+<li><strong>比喻</strong>：注释就像是给代码写的笔记，帮助别人（或未来的你）理解代码的意图。</li>
+<li><strong>内容</strong>：学习如何写单行注释（<code>//</code>）和多行注释（<code>/* ... */</code>）。<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// 这是一个单行注释，就像在代码旁边做的笔记</span><br><span class="hljs-built_in">int</span> number = <span class="hljs-number">5</span>; <span class="hljs-comment">// 告诉别人这个变量存储了一个数字</span><br><br><span class="hljs-comment">/* </span><br><span class="hljs-comment"> 这是一个多行注释</span><br><span class="hljs-comment"> 可以跨越多行，就像写一篇短文</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
+通过这些基础模块的学习，你将建立起C#编程的坚实基础，就像是学会了英语的基本语法和词汇，为进一步的深入学习打下基础。记住，编程就像是学习语言，多练习、多读、多写是提高的关键。</li>
+</ul>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-chain-item">今日事项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="print-no-link">#今日事项</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>今日事项-2024年6月27日</div>
+      <div>http://example.com/2024/06/27/今日事项-2024年6月27日/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiaoXiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>June 27, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/06/27/%E6%AF%8F%E6%97%A5%E4%BA%8B%E9%A1%B9promoto/" title="每日事项promoto">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">每日事项promoto</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/26/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B46%E6%9C%8826%E6%97%A5/" title="今日事项-2024年6月26日">
+                        <span class="hidden-mobile">今日事项-2024年6月26日</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>

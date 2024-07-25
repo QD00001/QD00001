@@ -1,0 +1,813 @@
+
+
+<!DOCTYPE html>
+<html lang="Zh" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XiaoXiangHui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="今日事项-2024年7月15日事项一 学习3个实用的算法1. 桶排序（Bucket Sort） 产生原因与背景：想象你是一位酒吧老板，在晚上高峰时段，顾客点了很多不同种类的鸡尾酒。为了快速服务，你根据酒的种类将订单分开处理，每种酒一个桶，这样可以同时准备多种酒，提高效率。 算法思路：桶排序就像是一位DJ在组织音乐派对，他根据音乐的节奏和风格将歌曲分类，然后按顺序播放每个类别的歌曲，确保派对的流畅进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="今日事项-2024年7月15日">
+<meta property="og:url" content="http://example.com/2024/07/15/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8815%E6%97%A5/index.html">
+<meta property="og:site_name" content="XiaoXiangHuiSite">
+<meta property="og:description" content="今日事项-2024年7月15日事项一 学习3个实用的算法1. 桶排序（Bucket Sort） 产生原因与背景：想象你是一位酒吧老板，在晚上高峰时段，顾客点了很多不同种类的鸡尾酒。为了快速服务，你根据酒的种类将订单分开处理，每种酒一个桶，这样可以同时准备多种酒，提高效率。 算法思路：桶排序就像是一位DJ在组织音乐派对，他根据音乐的节奏和风格将歌曲分类，然后按顺序播放每个类别的歌曲，确保派对的流畅进">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/%E6%A1%B6%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://example.com/img/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95.png">
+<meta property="og:image" content="http://example.com/img/%E7%9C%9F%E5%89%8D%E7%BC%80%E7%9C%9F%E5%90%8E%E7%BC%80.png">
+<meta property="og:image" content="http://example.com/img/http%E7%8A%B6%E6%80%81%E7%A0%811%E5%BC%80%E5%A4%B4%E5%92%8C2%E5%BC%80%E5%A4%B4%E7%9A%84.png">
+<meta property="og:image" content="http://example.com/img/http%E7%8A%B6%E6%80%81%E7%A0%813%E5%BC%80%E5%A4%B4%E7%9A%84.png">
+<meta property="og:image" content="http://example.com/img/http%E7%8A%B6%E6%80%81%E7%A0%814%E5%BC%80%E5%A4%B4%E7%9A%84.png">
+<meta property="og:image" content="http://example.com/img/http%E7%8A%B6%E6%80%81%E7%A0%815%E5%BC%80%E5%A4%B4%E7%9A%84.png">
+<meta property="article:published_time" content="2024-07-15T08:21:33.000Z">
+<meta property="article:modified_time" content="2024-07-25T07:28:02.345Z">
+<meta property="article:author" content="XiaoXiangHui">
+<meta property="article:tag" content="今日事项">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/%E6%A1%B6%E6%8E%92%E5%BA%8F.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>今日事项-2024年7月15日 - XiaoXiangHuiSite</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Xianghui&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>类别</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/samurai-7057873_1280.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="今日事项-2024年7月15日"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XiaoXiangHui
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-15 08:21" pubdate>
+          July 15, 2024 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.4k wörter
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          37 minuten
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">今日事项-2024年7月15日</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="今日事项-2024年7月15日"><a href="#今日事项-2024年7月15日" class="headerlink" title="今日事项-2024年7月15日"></a>今日事项-2024年7月15日</h1><h2 id="事项一-学习3个实用的算法"><a href="#事项一-学习3个实用的算法" class="headerlink" title="事项一 学习3个实用的算法"></a>事项一 学习3个实用的算法</h2><h3 id="1-桶排序（Bucket-Sort）"><a href="#1-桶排序（Bucket-Sort）" class="headerlink" title="1. 桶排序（Bucket Sort）"></a>1. 桶排序（Bucket Sort）</h3><p><img src="/img/%E6%A1%B6%E6%8E%92%E5%BA%8F.png" srcset="/img/loading.gif" lazyload alt="桶排序的图片" title="桶排序示例图片"></p>
+<h4 id="产生原因与背景："><a href="#产生原因与背景：" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你是一位酒吧老板，在晚上高峰时段，顾客点了很多不同种类的鸡尾酒。为了快速服务，你根据酒的种类将订单分开处理，每种酒一个桶，这样可以同时准备多种酒，提高效率。</p>
+<h4 id="算法思路："><a href="#算法思路：" class="headerlink" title="算法思路："></a>算法思路：</h4><p>桶排序就像是一位DJ在组织音乐派对，他根据音乐的节奏和风格将歌曲分类，然后按顺序播放每个类别的歌曲，确保派对的流畅进行。</p>
+<h4 id="代码案列："><a href="#代码案列：" class="headerlink" title="代码案列："></a>代码案列：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">bucket_sort</span>(<span class="hljs-params">arr</span>):<br>    <span class="hljs-comment"># 创建桶，数量为数组长度</span><br>    buckets = [[] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(arr))]<br>    <br>    <span class="hljs-comment"># 将每个元素分配到对应的桶中</span><br>    <span class="hljs-keyword">for</span> number <span class="hljs-keyword">in</span> arr:<br>        index = number * <span class="hljs-built_in">len</span>(arr) // (<span class="hljs-built_in">max</span>(arr) + <span class="hljs-number">1</span>)<br>        buckets[index].append(number)<br>    <br>    <span class="hljs-comment"># 对每个桶进行排序（这里使用内置的sorted函数）</span><br>    <span class="hljs-keyword">for</span> bucket <span class="hljs-keyword">in</span> buckets:<br>        sorted_bucket = <span class="hljs-built_in">sorted</span>(bucket)<br>    <br>    <span class="hljs-comment"># 合并桶中的元素</span><br>    sorted_array = []<br>    <span class="hljs-keyword">for</span> bucket <span class="hljs-keyword">in</span> buckets:<br>        sorted_array.extend(sorted_bucket)<br>    <br>    <span class="hljs-keyword">return</span> sorted_array<br><br><span class="hljs-comment"># 使用示例</span><br>arr = [<span class="hljs-number">0.3</span>, <span class="hljs-number">2.9</span>, <span class="hljs-number">2.5</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">2.2</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorted array:&quot;</span>, bucket_sort(arr))<br></code></pre></td></tr></table></figure>
+
+<h4 id="算法优缺点："><a href="#算法优缺点：" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：桶排序在元素分布均匀时非常高效，时间复杂度可以达到线性级别，O(n+k)。<br>缺点：如果元素分布不均匀，某些桶可能会非常拥挤，导致排序效率降低。</p>
+<h4 id="解决缺点的方法："><a href="#解决缺点的方法：" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>可以通过优化桶的分配策略或使用其他排序算法（如快速排序）来对每个桶内元素进行排序。</p>
+<h4 id="解决缺点后的代码案例："><a href="#解决缺点后的代码案例：" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><p>略（代码示例已经展示了桶排序的基本思想）</p>
+<h4 id="算法的3个实际应用案例："><a href="#算法的3个实际应用案例：" class="headerlink" title="算法的3个实际应用案例："></a>算法的3个实际应用案例：</h4><ul>
+<li><strong>数据处理</strong>：在处理大量数据时，根据数据的特征快速分类。</li>
+<li><strong>股票市场分析</strong>：根据股票的价格范围快速排序。</li>
+<li><strong>文件系统</strong>：在文件系统中，根据文件的类型或大小快速排序。</li>
+</ul>
+<h3 id="2-RANSAC-算法（Random-Sample-Consensus）随机抽样共识"><a href="#2-RANSAC-算法（Random-Sample-Consensus）随机抽样共识" class="headerlink" title="2. RANSAC 算法（Random Sample Consensus）随机抽样共识"></a>2. RANSAC 算法（Random Sample Consensus）随机抽样共识</h3><p><img src="/img/%E9%9A%8F%E6%9C%BA%E6%8A%BD%E6%A0%B7%E4%B8%80%E8%87%B4%E7%AE%97%E6%B3%95.png" srcset="/img/loading.gif" lazyload alt="随机抽样一致算法的图片" title="随机抽样一致算法示例图片"></p>
+<h4 id="产生原因与背景：-1"><a href="#产生原因与背景：-1" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你是一位考古学家，正在分析一组数据，这些数据中包含了真实考古发现的测量值和一些由于人为错误或自然变异产生的异常值。RANSAC 算法就是用来从这些数据中估计出最佳模型参数，同时忽略那些异常值。</p>
+<h4 id="算法思路：-1"><a href="#算法思路：-1" class="headerlink" title="算法思路："></a>算法思路：</h4><p>RANSAC 算法就像是一位侦探，在一系列证据中识别出真实的线索，忽略那些伪造或无关的证据。它随机选择一些数据点作为模型的初始估计，然后不断迭代，每次都选择与当前模型最吻合的数据子集。</p>
+<h4 id="代码案列：-1"><a href="#代码案列：-1" class="headerlink" title="代码案列："></a>代码案列：</h4><p>略（RANSAC 算法的实现较为复杂，通常涉及迭代模型拟合和异常值检测）</p>
+<h4 id="算法优缺点：-1"><a href="#算法优缺点：-1" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：RANSAC 算法非常适合于存在异常值的数据集，能够鲁棒地估计出模型参数。<br>缺点：RANSAC 算法可能需要多次迭代才能找到最佳模型，且在某些情况下可能收敛到局部最优解。</p>
+<h4 id="解决缺点的方法：-1"><a href="#解决缺点的方法：-1" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>可以通过设置合理的迭代次数和阈值来提高算法的稳定性和准确性。此外，与其他算法（如LMS或TLS）结合使用，以提高模型估计的鲁棒性。</p>
+<h4 id="解决缺点后的代码案例：-1"><a href="#解决缺点后的代码案例：-1" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><p>略（RANSAC 算法的实现通常需要特定的模型拟合和异常值检测方法）</p>
+<h4 id="算法的3个实际应用案例：-1"><a href="#算法的3个实际应用案例：-1" class="headerlink" title="算法的3个实际应用案例："></a>算法的3个实际应用案例：</h4><p>计算机视觉：在图像中检测直线或曲线，忽略图像噪声和遮挡。<br>信号处理：在信号中估计趋势线或周期性，忽略随机噪声。<br>机器学习：在训练数据集中存在异常值时，估计模型参数。</p>
+<h3 id="3-字符串匹配的KMP算法（Knuth-Morris-Pratt-Algorithm）"><a href="#3-字符串匹配的KMP算法（Knuth-Morris-Pratt-Algorithm）" class="headerlink" title="3. 字符串匹配的KMP算法（Knuth-Morris-Pratt Algorithm）"></a>3. 字符串匹配的KMP算法（Knuth-Morris-Pratt Algorithm）</h3><p><img src="/img/%E7%9C%9F%E5%89%8D%E7%BC%80%E7%9C%9F%E5%90%8E%E7%BC%80.png" srcset="/img/loading.gif" lazyload alt="真前缀真后缀的图片" title="真前缀真后缀的图片"></p>
+<h4 id="产生原因与背景：-2"><a href="#产生原因与背景：-2" class="headerlink" title="产生原因与背景："></a>产生原因与背景：</h4><p>想象你是一位侦探，需要在一份长文本中查找特定的关键词。如果逐个字符比较，效率会很低。KMP算法通过预处理模式字符串，构建一个部分匹配表，从而在主字符串中快速定位模式字符串的位置。</p>
+<h4 id="算法思路：-2"><a href="#算法思路：-2" class="headerlink" title="算法思路："></a>算法思路：</h4><p>KMP算法就像是一位熟练的打字员，他能够记住自己打的每个词，一旦发现错误，他可以直接跳到下一个可能正确的位置，而不是从错误的地方重新开始。</p>
+<h4 id="代码案列：-2"><a href="#代码案列：-2" class="headerlink" title="代码案列："></a>代码案列：</h4><p>略（KMP算法的实现较为复杂，通常涉及前缀函数的构建）</p>
+<h4 id="算法优缺点：-2"><a href="#算法优缺点：-2" class="headerlink" title="算法优缺点："></a>算法优缺点：</h4><p>优点：KMP算法在字符串匹配中非常高效，特别是对于长文本和重复模式，其时间复杂度为O(n+m)，其中n是主字符串长度，m是模式字符串长度。<br>缺点：KMP算法的预处理步骤需要额外的时间和空间来构建部分匹配表。</p>
+<h4 id="解决缺点的方法：-2"><a href="#解决缺点的方法：-2" class="headerlink" title="解决缺点的方法："></a>解决缺点的方法：</h4><p>预处理步骤是必要的，但可以通过优化数据结构和算法来减少资源消耗。</p>
+<h4 id="解决缺点后的代码案例：-2"><a href="#解决缺点后的代码案例：-2" class="headerlink" title="解决缺点后的代码案例："></a>解决缺点后的代码案例：</h4><p>略（KMP算法的实现通常需要特定的数据结构）</p>
+<h4 id="算法的3个实际应用案例：-2"><a href="#算法的3个实际应用案例：-2" class="headerlink" title="算法的3个实际应用案例："></a>算法的3个实际应用案例：</h4><ul>
+<li><strong>文本编辑器</strong>：在文本编辑器中，快速查找和替换文本。</li>
+<li><strong>搜索引擎</strong>：在海量数据中快速定位关键词。</li>
+<li><strong>网络安全</strong>：检测网络流量中的恶意模式或代码。</li>
+</ul>
+<h2 id="事项二-Net-8-0-新的变化"><a href="#事项二-Net-8-0-新的变化" class="headerlink" title="事项二 .Net 8.0 新的变化"></a>事项二 .Net 8.0 新的变化</h2><h3 id="基本情况"><a href="#基本情况" class="headerlink" title="基本情况"></a>基本情况</h3><p> .NET 8 是微软于2021年8月24日宣布的下一代编程语言和框架，它是 .NET 宇宙的一部分，与 C# (Common Language Infrastructure) 紧密集成。.NET 8 引入了许多新功能，如原生编译、值类型 (Value Types)、结构化并发 (structured concurrency) 和快速数组 (RapidArray)。.NET 8 还支持本机 (native) AOT (Ahead-Of-Time) 编译，以提高性能和启动速度。</p>
+<pre><code class="hljs">    .NET 8 是 Microsoft 发布的最新一代 .NET 框架，它引入了许多新功能和改进，旨在提高性能、可扩展性和开发效率。
+</code></pre>
+<h3 id="NET-8-的主要亮点："><a href="#NET-8-的主要亮点：" class="headerlink" title=".NET 8 的主要亮点："></a>.NET 8 的主要亮点：</h3><pre><code class="hljs">    1、性能提升：.NET 8 引入了名为“性能计数器”的新功能，可帮助开发人员了解应用程序的性能瓶颈，并采取相应的优化措施。此外，.NET 8 还对许多现有的组件和库进行了优化，以提高应用程序的整体性能。
+    2、新的异步编程模型：.NET 8 引入了名为“协程”的新的异步编程模型，它可以更自然地处理异步操作和长时间运行的任务。协程可以在同一个线程上执行多个异步操作，从而避免了线程切换和上下文切换的开销。
+    3、云原生支持：.NET 8 提供了更好的云原生支持，可以更轻松地将应用程序部署到 Kubernetes 等容器化平台中。.NET 8 还支持使用 Docker 等容器化工具打包和分发应用程序。
+    4、新的开发工具：.NET 8 引入了新的开发工具，如 R#”、Visual Studio Code“ 和 Visual Studio IDE 等，这些工具可以帮助开发人员更高效地编写、调试和测试代码。
+    5、跨平台支持：.NET 8 可以在多个平台上运行，包括 Windows、macOS 和 Linux 等操作系统。此外，.NET 8 还支持在移动设备、Web 应用程序和游戏开发等领域中使用。
+    6、人工智能和机器学习：.NET 8 内置了对人工智能和机器学习的支持，可以更轻松地使用这些技术来构建智能应用程序。
+    7、安全性改进：.NET 8 对安全性进行了改进，包括更好的代码签名和加密技术、对 .NET 反射的限制、对代码访问控制的改进等。
+
+
+    .NET 8 为开发人员提供了许多新功能和改进，可以帮助他们更高效地编写高质量的应用程序。
+</code></pre>
+<h3 id="NET-8-中引入的一些主要功能和改进："><a href="#NET-8-中引入的一些主要功能和改进：" class="headerlink" title=".NET 8 中引入的一些主要功能和改进："></a>.NET 8 中引入的一些主要功能和改进：</h3><pre><code class="hljs">    1、性能优化：.NET 8 引入了名为“JIT-Chains”的全新技术，它可以将多个热点方法组合在一起，以减少 JIT 编译的开销。此外，.NET 8 还优化了垃圾回收器的性能，提高了堆内存的压缩速度和效率。
+    2、容器化：.NET 8 支持容器化应用，可以将应用打包成 Docker 镜像并在任何支持 Docker 的平台上运行。这使得应用更容易部署和扩展，并且可以与其他容器化应用集成。
+    3、多平台支持：.NET 8 可以在 Linux、macOS 和 Windows 平台上运行，并且支持 ARM64 和 ARMv7 架构，这意味着可以在各种设备和应用程序中使用 .NET 8。
+    4、新增语言功能：.NET 8 支持 C# 10 和 VB.NET 16，这些语言版本引入了许多新功能和改进，如记录模式、switch表达式、模式匹配、记录类型、可变性和局部类型参数等。
+    5、云原生应用支持：.NET 8 支持 Kubernetes 和云原生应用的其他组件，如服务网格、StatefulSet 等，这使得 .NET 8 更适合构建云原生应用。
+    6、数据库连接：.NET 8 引入了新的数据库连接 API，可以更轻松地连接各种数据库，如 MySQL、PostgreSQL 和 SQL Server 等。
+    7、Web API 改进：.NET 8 对 Web API 进行了改进，可以更轻松地创建 RESTful API，并且支持异步和同步请求处理。
+    总之，.NET 8 引入了许多新功能和改进，旨在提高性能、可扩展性和开发效率，使其成为构建现代应用程序的一个强大框架。
+</code></pre>
+<h4 id="NET-8-与-NET-7-相比："><a href="#NET-8-与-NET-7-相比：" class="headerlink" title=".NET 8 与.NET 7 相比："></a>.NET 8 与.NET 7 相比：</h4><pre><code class="hljs">    主要区别在于性能优化、容器化、多平台支持、语言功能、云原生应用支持、数据库连接和 Web API 改进等方面。.NET 8 在这些方面进行了升级和改进，旨在提高性能、可扩展性和开发效率。
+</code></pre>
+<h3 id="NET8对比-NET："><a href="#NET8对比-NET：" class="headerlink" title=".NET8对比.NET："></a>.NET8对比.NET：</h3><pre><code class="hljs">    性能优化：.NET 8 引入了 JIT-Chains 技术，将多个热点方法组合在一起，以减少 JIT 编译的开销。此外，.NET 8 还优化了垃圾回收器的性能，提高了堆内存的压缩速度和效率。
+    容器化：.NET 8 支持容器化应用，可以将应用打包成 Docker 镜像并在任何支持 Docker 的平台上运行。这使得应用更容易部署和扩展，并且可以与其他容器化应用集成。
+    多平台支持：.NET 8 可以在 Linux、macOS 和 Windows 平台上运行，并且支持 ARM64 和 ARMv7 架构，这意味着可以在各种设备和应用程序中使用 .NET 8。
+    语言功能：.NET 8 支持 C# 10 和 VB.NET 16，这些语言版本引入了许多新功能和改进，如记录模式、switch 表达式、模式匹配、记录类型、可变性和局部类型参数等。
+    云原生应用支持：.NET 8 支持 Kubernetes 和云原生应用的其他组件，如服务网格、StatefulSet 等，这使得 .NET 8 更适合构建云原生应用。
+    数据库连接：.NET 8 引入了新的数据库连接 API，可以更轻松地连接各种数据库，如 MySQL、PostgreSQL 和 SQL Server 等。
+</code></pre>
+<h3 id="新功能："><a href="#新功能：" class="headerlink" title="新功能："></a>新功能：</h3><h4 id="1-本机-AOT"><a href="#1-本机-AOT" class="headerlink" title="1.本机 AOT"></a>1.本机 AOT</h4><pre><code class="hljs">    发布为本机AOT的选项最初是在.NET 7中引入的。使用本机AOT发布应用会创建一个完全独立的应用版本，该版本不需要运行时，所有内容都包含在一个文件中。
+
+    .NET8 添加了对 macOS 上的 x64 和 Arm64 体系结构的支持。此外，Linux 上本机 AOT 应用的大小现在最多可缩小 50%。
+</code></pre>
+<h4 id="2-代码生成"><a href="#2-代码生成" class="headerlink" title="2.代码生成"></a>2.代码生成</h4><pre><code class="hljs">.NET 8 包括对代码生成和实时 (JIT) 编译的改进：
+
+Arm64 性能改进
+
+SIMD 改进
+
+云原生改进
+
+按配置优化 (PGO) 改进
+
+支持 AVX-512 ISA 扩展
+
+JIT 吞吐量改进
+
+循环和常规优化
+</code></pre>
+<h4 id="3-在-Linux-上生成你自己的-NET"><a href="#3-在-Linux-上生成你自己的-NET" class="headerlink" title="3.在 Linux 上生成你自己的 .NET"></a>3.在 Linux 上生成你自己的 .NET</h4><pre><code class="hljs">    在以前的 .NET 版本中，可以从源生成 .NET，但需要从与发布相对应的 dotnet/installer 存储库提交创建“源 tarball”。在 .NET 8 中，不再需要这样操作，你可以直接从 dotnet/dotnet 存储库在 Linux 上生成 .NET。该存储库使用 dotnet/source-build 生成 .NET 运行时、工具和 SDK。这是 Red Hat 和 Canonical 用于生成 .NET 的同一内部版本。
+
+    对于大多数人来说，在容器中生成是最简单的方法，因为 dotnet-buildtools/prereqs 容器映像包含所有必需的依赖项。
+</code></pre>
+<h4 id="4-Linux-的最低支持版本"><a href="#4-Linux-的最低支持版本" class="headerlink" title="4. Linux 的最低支持版本"></a>4. Linux 的最低支持版本</h4><p>适用于 .NET 8 的 Linux 最低支持基线已更新：</p>
+<pre><code class="hljs">    .NET 将面向 Ubuntu 16.04 生成，适用于所有体系结构。这对于定义 .NET 8 的最低 glibc 版本非常重要。例如，.NET 8 甚至无法在 Ubuntu 14.04 上启动。
+
+    对于 Red Hat Enterprise Linux (RHEL)，.NET 支持 RHEL 8+，删除 RHEL 7。
+</code></pre>
+<h2 id="事项三-RESTful-API实践详解"><a href="#事项三-RESTful-API实践详解" class="headerlink" title="事项三 RESTful API实践详解"></a>事项三 RESTful API实践详解</h2><h3 id="什么是RESTful"><a href="#什么是RESTful" class="headerlink" title="什么是RESTful"></a>什么是RESTful</h3><pre><code class="hljs">    REST 是面向资源的，这个概念非常重要，而资源是通过 URI 进行暴露，URI 的设计只要负责把资源通过合理方式暴露出来就可以了，对资源的操作与它无关，操作是通过 HTTP动词来体现。所以REST 通过 URI 暴露资源时，会强调不要在 URI 中出现动词，而是对一类资源只提供一个url，通过GET、POST、PUT、DELETE请求来指定要执行的操作。
+
+   非RESTful 用法（多个url且url中存在动词）
+    <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/order/</span>query/<span class="hljs-number">1</span> GET  根据订单id查询订单数据<br>http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/order/</span>save POST 新增订单<br>http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/order/u</span>pdate POST 修改订单信息<br>http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/order/</span><span class="hljs-keyword">delete</span> GET/POST 删除订单信息<br></code></pre></td></tr></table></figure>
+    RESTful 用法（同一个url，具体的操作通过HTTP请求方式来指定）
+    <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>/order/<span class="hljs-number">1</span> GET  根据订单id查询订单数据<br>http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>/<span class="hljs-keyword">order</span>  <span class="hljs-title">POST</span> 新增订单<br>http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>/<span class="hljs-keyword">order</span>  <span class="hljs-title">PUT</span> 修改订单信息<br>http://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>/<span class="hljs-keyword">order</span>  <span class="hljs-title">DELETE</span> 删除订单信息<br></code></pre></td></tr></table></figure>
+    REST很好地利用了HTTP本身就有的一些特征，如HTTP动词、HTTP状态码、HTTP报头等等。
+    REST API 是基于 HTTP的，所以你的API应该去使用 HTTP的一些标准。这样所有的HTTP客户端（如浏览器）才能够直接理解你的API。
+
+    REST返回值是标准的，我们不用单独定义和封装返回的状态码，而是直接使用HTTP的状态码，非RESTful 返回举例：
+    &#123;
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;msg&quot;: &quot;成功&quot;
+    &#125;
+    &#123;
+      &quot;code&quot;: &quot;1&quot;,
+      &quot;msg&quot;: &quot;失败&quot;
+    &#125;
+    这种方式还要我们自己去解析，还要前端和后端去协商你返回的0是啥意思。
+    
+</code></pre>
+<h4 id="RESTful-的关键"><a href="#RESTful-的关键" class="headerlink" title="RESTful 的关键"></a>RESTful 的关键</h4><pre><code class="hljs">    RESTful的关键是定义可表示流程元素/资源的对象。在REST中，每一个对象都是通过URL来表示的，对象用户负责将状态信息打包进每一条消息内，以便对象的处理总是无状态的。前后端分离的项目基本上就是无状态的，我们经常通过签名判断当前的请求是否合法。
+
+    所谓无状态的，即所有的资源，都可以通过URI定位，而且这个定位与其他资源无关，也不会因为其他资源的变化而改变。
+
+    举个简单的例子说明一下有状态和无状态的区别，如查询员工的工资，如果查询工资是需要登录系统，进入查询工资的页面，执行相关操作后，获取工资的多少，则这种情况是有状态的，因为查询工资的每一步操作都依赖于前一步操作，只要前置操作不成功，后续操作就无法执行；如果输入一个url即可得到指定员工的工资，则这种情况是无状态的，因为获取工资不依赖于其他资源或状态，且这种情况下，员工工资是一个资源，由一个url与之对应，可以通过HTTP中的GET方法得到资源，这是典型的RESTful风格。
+    ![有状态的图片](/img/有状态.png &quot;有状态的图片&quot;)
+    ![无状态的图片](/img/无状态.png &quot;无状态的图片&quot;)
+</code></pre>
+<h4 id="RESTful-API代码示例"><a href="#RESTful-API代码示例" class="headerlink" title="RESTful API代码示例"></a>RESTful API代码示例</h4><pre><code class="hljs"><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><code class="hljs kotlin">	<span class="hljs-keyword">package</span> com.ldy.sboot.demo.controller;<br> <br><span class="hljs-keyword">import</span> org.springframework.beans.factory.<span class="hljs-keyword">annotation</span>.Autowired;<br><span class="hljs-keyword">import</span> org.springframework.http.HttpStatus;<br><span class="hljs-keyword">import</span> org.springframework.http.ResponseEntity;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.DeleteMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.GetMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.PathVariable;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.PostMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.PutMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.RequestMapping;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.RequestParam;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.<span class="hljs-keyword">annotation</span>.RestController;<br> <br><span class="hljs-keyword">import</span> com.ldy.sboot.demo.entity.OrderEntity;<br><span class="hljs-keyword">import</span> com.ldy.sboot.demo.service.OrderService;<br> <br><span class="hljs-meta">@RequestMapping(<span class="hljs-string">&quot;restful/order&quot;</span>)</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderController</span> &#123;<br> <br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> OrderService orderService;<br> <br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * @描述: 根据ID查询&lt;br&gt;</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> id</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@GetMapping(value = <span class="hljs-string">&quot;&#123;id&#125;&quot;</span>)</span><br>    <span class="hljs-comment">//@RequestMapping(method = RequestMethod.GET)</span><br>    <span class="hljs-keyword">public</span> ResponseEntity&lt;OrderEntity&gt; queryOrderById(<span class="hljs-meta">@PathVariable(<span class="hljs-string">&quot;id&quot;</span>)</span> <span class="hljs-built_in">Long</span> id) &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            OrderEntity entity = orderService.queryOrderById(id);<br>            <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> == entity) &#123;<br>                <span class="hljs-comment">// 资源不存在，响应404</span><br>                <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.NOT_FOUND).body(<span class="hljs-literal">null</span>);<br>            &#125;<br>            <span class="hljs-comment">// 200</span><br>            <span class="hljs-comment">// return ResponseEntity.status(HttpStatus.OK).body(entity);</span><br>            <span class="hljs-keyword">return</span> ResponseEntity.ok(entity);<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>        <span class="hljs-comment">// 500</span><br>        <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(<span class="hljs-literal">null</span>);<br>    &#125;<br> <br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * @描述: 新增&lt;br&gt;</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> entity</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@PostMapping</span><br>    <span class="hljs-comment">//@RequestMapping(method = RequestMethod.POST)</span><br>    <span class="hljs-keyword">public</span> ResponseEntity&lt;<span class="hljs-built_in">Void</span>&gt; saveOrder(OrderEntity entity) &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            orderService.saveOrder(entity);<br>            <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.CREATED).build();<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            <span class="hljs-comment">// TODO Auto-generated catch block</span><br>            e.printStackTrace();<br>        &#125;<br>        <span class="hljs-comment">// 500</span><br>        <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(<span class="hljs-literal">null</span>);<br>    &#125;<br> <br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * @描述: 修改&lt;br&gt;</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> entity</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@PutMapping</span><br>    <span class="hljs-comment">//@RequestMapping(method = RequestMethod.PUT)</span><br>    <span class="hljs-keyword">public</span> ResponseEntity&lt;<span class="hljs-built_in">Void</span>&gt; updateOrder(OrderEntity entity) &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            orderService.updateOrder(entity);<br>            <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.NO_CONTENT).build();<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>        <span class="hljs-comment">// 500</span><br>        <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(<span class="hljs-literal">null</span>);<br>    &#125;<br> <br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * @描述: 删除&lt;br&gt;</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> id</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@DeleteMapping</span><br>    <span class="hljs-comment">//@RequestMapping(method = RequestMethod.DELETE)</span><br>    <span class="hljs-keyword">public</span> ResponseEntity&lt;<span class="hljs-built_in">Void</span>&gt; deleteOrder(<span class="hljs-meta">@RequestParam(value = <span class="hljs-string">&quot;id&quot;</span>)</span> <span class="hljs-built_in">Long</span> id) &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            OrderEntity entity = orderService.queryOrderById(id);<br>            <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> == entity) &#123;<br>                <span class="hljs-comment">// 不存在返回404</span><br>                <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.NOT_FOUND).build();<br>            &#125;<br>            orderService.deleteOrderById(id);<br>            <span class="hljs-comment">// 204</span><br>            <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.NO_CONTENT).build();<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>        <span class="hljs-comment">// 500</span><br>        <span class="hljs-keyword">return</span> ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(<span class="hljs-literal">null</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="HTTP状态码说明"><a href="#HTTP状态码说明" class="headerlink" title="HTTP状态码说明"></a>HTTP状态码说明</h3><p> <img src="/img/http%E7%8A%B6%E6%80%81%E7%A0%811%E5%BC%80%E5%A4%B4%E5%92%8C2%E5%BC%80%E5%A4%B4%E7%9A%84.png" srcset="/img/loading.gif" lazyload alt="http状态码图片" title="http状态码1开头和2开头的图片"><br> <img src="/img/http%E7%8A%B6%E6%80%81%E7%A0%813%E5%BC%80%E5%A4%B4%E7%9A%84.png" srcset="/img/loading.gif" lazyload alt="http状态码图片" title="http状态码3开头的图片"><br> <img src="/img/http%E7%8A%B6%E6%80%81%E7%A0%814%E5%BC%80%E5%A4%B4%E7%9A%84.png" srcset="/img/loading.gif" lazyload alt="http状态码图片" title="http状态码4开头的图片"><br> <img src="/img/http%E7%8A%B6%E6%80%81%E7%A0%815%E5%BC%80%E5%A4%B4%E7%9A%84.png" srcset="/img/loading.gif" lazyload alt="http状态码图片" title="http状态码5开头的图片"></p>
+<p> 注：.Net 8.0 新的变化 内容来自 csdn_aspnet csdn<br>     RESTful API实践详解 内容来自 咚咚阳 csdn</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="category-chain-item">今日事项</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9/" class="print-no-link">#今日事项</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>今日事项-2024年7月15日</div>
+      <div>http://example.com/2024/07/15/今日事项-2024年7月15日/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Beitragsautor</div>
+          <div>XiaoXiangHui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Veröffentlicht am</div>
+          <div>July 15, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Urheberrechtshinweis</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/16/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8816%E6%97%A5/" title="今日事项-2024年7月16日">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">今日事项-2024年7月16日</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/13/%E4%BB%8A%E6%97%A5%E4%BA%8B%E9%A1%B9-2024%E5%B9%B47%E6%9C%8813%E6%97%A5/" title="今日事项-2024年7月13日">
+                        <span class="hidden-mobile">今日事项-2024年7月13日</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Inhaltsverzeichnis</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>Xianghui（<span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid）</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+  </noscript>
+</body>
+</html>
